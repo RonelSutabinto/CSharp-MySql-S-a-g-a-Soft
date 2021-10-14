@@ -1,0 +1,2002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89F833E5-ACC6-4652-9B41-7AA4CE1ED0B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SagaOperations.My.MyApplication</StartupObject>
+    <RootNamespace>SagaOperations</RootNamespace>
+    <AssemblyName>SagaOperations</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>False</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <AssemblyVersionSettings>
+    </AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>
+    </AssemblyFileVersionSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SagaOperations.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SagaOperations.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon64v64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\..\..\..\..\..\inetpub\</OutputPath>
+    <DocumentationFile>SagaOperations.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SagaOperations.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Preferences\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Preferences\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>..\..\Preferences\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Preferences\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Preferences\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v21.1.Win, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Dialogs.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Images.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Map.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v21.1.Drawing, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.DataVisualization.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.TreeMap.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v21.1.Wizard, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraDialogs.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v21.1.Presets, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v21.1.Win, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraMap.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v21.1.Core.Desktop, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeMap.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeMap.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Preferences\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\Preferences\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.Office.Interop" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\admin_acctCancel.Designer.vb">
+      <DependentUpon>admin_acctCancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\admin_acctCancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_AutoUpdate.Designer.vb">
+      <DependentUpon>Admin_AutoUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_AutoUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_BroadcastMsg.Designer.vb">
+      <DependentUpon>Admin_BroadcastMsg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_BroadcastMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_CreditMemo.Designer.vb">
+      <DependentUpon>Admin_CreditMemo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_CreditMemo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_DisapprovedTransactions.Designer.vb">
+      <DependentUpon>Admin_DisapprovedTransactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_DisapprovedTransactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\admin_errorcorrectcashiering.Designer.vb">
+      <DependentUpon>admin_errorcorrectcashiering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\admin_errorcorrectcashiering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\admin_errorcorrectpayment.Designer.vb">
+      <DependentUpon>admin_errorcorrectpayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\admin_errorcorrectpayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_MCPriceChecker.Designer.vb">
+      <DependentUpon>Admin_MCPriceChecker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_MCPriceChecker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\admin_MigrateAccount.Designer.vb">
+      <DependentUpon>admin_MigrateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\admin_MigrateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_ReclassINVTY.Designer.vb">
+      <DependentUpon>Admin_ReclassINVTY.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_ReclassINVTY.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_ReclassStatus.Designer.vb">
+      <DependentUpon>Admin_ReclassStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_ReclassStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin_UpdateAccount.designer.vb">
+      <DependentUpon>Admin_UpdateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Admin_UpdateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CIF\frm_Customer_Information.Designer.vb">
+      <DependentUpon>frm_Customer_Information.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CIF\frm_Customer_Information.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving.Designer.vb" />
+    <Compile Include="Inventory\IS_Inventory_Receiving.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\class_Operation_Procedures.vb" />
+    <Compile Include="Modules\class_Operation_Variables.vb" />
+    <Compile Include="Modules\Inventory.vb" />
+    <Compile Include="CIF\Customers_Information.designer.vb">
+      <DependentUpon>Customers_Information.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CIF\Customers_Information.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CIF\Customers_Information_find.designer.vb">
+      <DependentUpon>Customers_Information_find.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CIF\Customers_Information_find.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReference.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmReference.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering\IS_Cashiering_Transactions.Designer.vb">
+      <DependentUpon>IS_Cashiering_Transactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashiering\IS_Cashiering_Transactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\frm_Summaries.Designer.vb">
+      <DependentUpon>frm_Summaries.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\frm_Summaries.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_FirstLoadSummaryTabular.Designer.vb">
+      <DependentUpon>IS_FirstLoadSummaryTabular.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_FirstLoadSummaryTabular.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inquiry_Refno.Designer.vb">
+      <DependentUpon>IS_Inquiry_Refno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inquiry_Refno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_InquiryORNo.Designer.vb">
+      <DependentUpon>IS_InquiryORNo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_InquiryORNo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inventory_DetailedSCategoryFindvb.Designer.vb">
+      <DependentUpon>IS_Inventory_DetailedSCategoryFindvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inventory_DetailedSCategoryFindvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inventory_Detailed_SHistory.Designer.vb">
+      <DependentUpon>IS_Inventory_Detailed_SHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inventory_Detailed_SHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_MC_FromSuppler.Designer.vb">
+      <DependentUpon>IS_Inventory_MC_FromSuppler.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_MC_FromSuppler.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\rpt_Inventory_DetailsRemarks.Designer.vb">
+      <DependentUpon>rpt_Inventory_DetailsRemarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\rpt_Inventory_DetailsRemarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPreviews\Blank_rpt.Designer.vb">
+      <DependentUpon>Blank_rpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreviews\Blank_rpt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintPreviews\PortraitBlank.Designer.vb">
+      <DependentUpon>PortraitBlank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreviews\PortraitBlank.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintPreviews\RPT_LTORegExpenses.Designer.vb">
+      <DependentUpon>RPT_LTORegExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreviews\RPT_LTORegExpenses.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintPreviews\xRptBranchInventory.designer.vb">
+      <DependentUpon>xRptBranchInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreviews\xRptBranchInventory.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintPreviews\xRptSales_Summary.designer.vb">
+      <DependentUpon>xRptSales_Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreviews\xRptSales_Summary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inventory\rpt_inv_Inventory_ReceivingReport.designer.vb">
+      <DependentUpon>rpt_inv_Inventory_ReceivingReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inventory\rpt_inv_Inventory_ReceivingReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IS_Sales_DEPO_Monitoringvb.Designer.vb">
+      <DependentUpon>IS_Sales_DEPO_Monitoringvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IS_Sales_DEPO_Monitoringvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\IS_Sales_DEPO_Remarks.Designer.vb">
+      <DependentUpon>IS_Sales_DEPO_Remarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IS_Sales_DEPO_Remarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Sales_FindCust.Designer.vb">
+      <DependentUpon>IS_Sales_FindCust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Sales_FindCust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inquiry_CustLedger.Designer.vb">
+      <DependentUpon>IS_Inquiry_CustLedger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inquiry_CustLedger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Deduct.Designer.vb">
+      <DependentUpon>IS_Inventory_Deduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Deduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Deduct_item_find.Designer.vb">
+      <DependentUpon>IS_Inventory_Deduct_item_find.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Deduct_item_find.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inventory_DetailedSummary.Designer.vb">
+      <DependentUpon>IS_Inventory_DetailedSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_Inventory_DetailedSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_item_add.Designer.vb">
+      <DependentUpon>IS_Inventory_item_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_item_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_item_find.Designer.vb">
+      <DependentUpon>IS_Inventory_item_find.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_item_find.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Item_Inquiry.Designer.vb">
+      <DependentUpon>IS_Inventory_Item_Inquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Item_Inquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Inventory_List.Designer.vb">
+      <DependentUpon>IS_Inventory_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Inventory_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Outgoing.Designer.vb">
+      <DependentUpon>IS_Inventory_Outgoing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Outgoing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Outgoing_item_find.Designer.vb">
+      <DependentUpon>IS_Inventory_Outgoing_item_find.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Outgoing_item_find.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Outgoing_View.Designer.vb">
+      <DependentUpon>IS_Inventory_Outgoing_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Outgoing_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_Cost.Designer.vb">
+      <DependentUpon>IS_Inventory_Receiving_Cost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_Cost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_Cost_ADDCOST.Designer.vb">
+      <DependentUpon>IS_Inventory_Receiving_Cost_ADDCOST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_Cost_ADDCOST.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_Cost_ShowSI.Designer.vb">
+      <DependentUpon>IS_Inventory_Receiving_Cost_ShowSI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_Cost_ShowSI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_View.Designer.vb">
+      <DependentUpon>IS_Inventory_Receiving_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_Receiving_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_TransactionReports.Designer.vb">
+      <DependentUpon>IS_Inventory_TransactionReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_TransactionReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_TransactionReports_ApprovedTransfers.Designer.vb">
+      <DependentUpon>IS_Inventory_TransactionReports_ApprovedTransfers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\IS_Inventory_TransactionReports_ApprovedTransfers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries\IS_Sales_Inquiry.Designer.vb">
+      <DependentUpon>IS_Sales_Inquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiries\IS_Sales_Inquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Sales_item_find.Designer.vb">
+      <DependentUpon>IS_Sales_item_find.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Sales_item_find.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collection\IS_Sales_Payments.Designer.vb">
+      <DependentUpon>IS_Sales_Payments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collection\IS_Sales_Payments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPreviews\RPT_ActualCollectionPrintPreview.Designer.vb">
+      <DependentUpon>RPT_ActualCollectionPrintPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreviews\RPT_ActualCollectionPrintPreview.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\MC_ReleasesDocsMainFrm.Designer.vb">
+      <DependentUpon>MC_ReleasesDocsMainFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\MC_ReleasesDocsMainFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_AmortSched.designer.vb">
+      <DependentUpon>rpt_rd_AmortSched.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_AmortSched.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_Certification.designer.vb">
+      <DependentUpon>rpt_rd_Certification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_Certification.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_ChattelM.designer.vb">
+      <DependentUpon>rpt_rd_ChattelM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_ChattelM.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_Computation.designer.vb">
+      <DependentUpon>rpt_rd_Computation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_Computation.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_deedofreconveyance.designer.vb">
+      <DependentUpon>rpt_rd_deedofreconveyance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_deedofreconveyance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_deedofsalewaom.designer.vb">
+      <DependentUpon>rpt_rd_deedofsalewaom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_deedofsalewaom.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_disclosurestatementolct.designer.vb">
+      <DependentUpon>rpt_rd_disclosurestatementolct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_disclosurestatementolct.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_pulloutreceipt.designer.vb">
+      <DependentUpon>rpt_rd_pulloutreceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_pulloutreceipt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_waiver.designer.vb">
+      <DependentUpon>rpt_rd_waiver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Releases Documents\rpt_rd_waiver.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_AcctMasterlist.Designer.vb">
+      <DependentUpon>rpt_AcctMasterlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_AcctMasterlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_ActualCollections.Designer.vb">
+      <DependentUpon>rpt_ActualCollections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_ActualCollections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_Cashiering.Designer.vb">
+      <DependentUpon>rpt_Cashiering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_Cashiering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_ClosedAcct.Designer.vb">
+      <DependentUpon>rpt_ClosedAcct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_ClosedAcct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_CollectionAging.Designer.vb">
+      <DependentUpon>rpt_CollectionAging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_CollectionAging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_CreditMemo.Designer.vb">
+      <DependentUpon>rpt_CreditMemo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_CreditMemo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_DEPtoREP.Designer.vb">
+      <DependentUpon>rpt_DEPtoREP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_DEPtoREP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_InsuranceRpt.Designer.vb">
+      <DependentUpon>rpt_InsuranceRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_InsuranceRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_MCAccountPromo.Designer.vb">
+      <DependentUpon>rpt_MCAccountPromo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_MCAccountPromo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_MCForDepo.Designer.vb">
+      <DependentUpon>rpt_MCForDepo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_MCForDepo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_MCFreebieListing.Designer.vb">
+      <DependentUpon>rpt_MCFreebieListing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_MCFreebieListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_Report.Designer.vb">
+      <DependentUpon>rpt_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_ShowIBT.Designer.vb">
+      <DependentUpon>rpt_ShowIBT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_ShowIBT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\IS_Sales_PreprintedReleaseDocs.Designer.vb">
+      <DependentUpon>IS_Sales_PreprintedReleaseDocs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IS_Sales_PreprintedReleaseDocs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collection\IS_Sales_RedeemOrNot.Designer.vb">
+      <DependentUpon>IS_Sales_RedeemOrNot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Collection\IS_Sales_RedeemOrNot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\IS_SALES_Release.Designer.vb">
+      <DependentUpon>IS_SALES_Release.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\IS_SALES_Release.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Sales_ReleaseAccount_List.Designer.vb">
+      <DependentUpon>IS_Sales_ReleaseAccount_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuickSearches\IS_Sales_ReleaseAccount_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\IS_SALES_Release_View.Designer.vb">
+      <DependentUpon>IS_SALES_Release_View.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\IS_SALES_Release_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\IS_SALES_Report_SALESfortoday.Designer.vb">
+      <DependentUpon>IS_SALES_Report_SALESfortoday.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IS_SALES_Report_SALESfortoday.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\IS_SALES_Report_SALESRange.Designer.vb">
+      <DependentUpon>IS_SALES_Report_SALESRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IS_SALES_Report_SALESRange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\IS_Sales_ShowFreebie.Designer.vb">
+      <DependentUpon>IS_Sales_ShowFreebie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\IS_Sales_ShowFreebie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\MC_AcctDetailedRemarks.Designer.vb">
+      <DependentUpon>MC_AcctDetailedRemarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\MC_AcctDetailedRemarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Controls\Xuc_Spare_Parts_Details.Designer.vb">
+      <DependentUpon>Xuc_Spare_Parts_Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Controls\Xuc_Spare_Parts_Details.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Controls\Xuc_Spare_Parts_Sales.Designer.vb">
+      <DependentUpon>Xuc_Spare_Parts_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Controls\Xuc_Spare_Parts_Sales.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\ErrorCorrect\SPA_ErrorCorrect.designer.vb">
+      <DependentUpon>SPA_ErrorCorrect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\ErrorCorrect\SPA_ErrorCorrect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\ErrorCorrect\SPA_Search_Sales_ErrorCorrect.designer.vb">
+      <DependentUpon>SPA_Search_Sales_ErrorCorrect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\ErrorCorrect\SPA_Search_Sales_ErrorCorrect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Outgoing\Search_SPA_fromWH.designer.vb">
+      <DependentUpon>Search_SPA_fromWH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Outgoing\Search_SPA_fromWH.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Outgoing\SPA_Add_Outgoing.designer.vb">
+      <DependentUpon>SPA_Add_Outgoing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Outgoing\SPA_Add_Outgoing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Outgoing\SPA_Outgoing.designer.vb">
+      <DependentUpon>SPA_Outgoing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Outgoing\SPA_Outgoing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\frm_Spare_Parts_Purchase_Orders.Designer.vb">
+      <DependentUpon>frm_Spare_Parts_Purchase_Orders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\frm_Spare_Parts_Purchase_Orders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\Search_Spare_Parts_PO.designer.vb">
+      <DependentUpon>Search_Spare_Parts_PO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\Search_Spare_Parts_PO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\Spare_Parts_Add.designer.vb">
+      <DependentUpon>Spare_Parts_Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\Spare_Parts_Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\SPA_Receiving.designer.vb">
+      <DependentUpon>SPA_Receiving.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Inventory\Receiving\SPA_Receiving.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\IS_Sales_SP_temp.Designer.vb">
+      <DependentUpon>IS_Sales_SP_temp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\IS_Sales_SP_temp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\maint_ChangeApprover_Sales.Designer.vb">
+      <DependentUpon>maint_ChangeApprover_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\maint_ChangeApprover_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\maint_CustAccount.Designer.vb">
+      <DependentUpon>maint_CustAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\maint_CustAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\maint_terms_mc.Designer.vb">
+      <DependentUpon>maint_terms_mc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\maint_terms_mc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\main_mc_price.Designer.vb">
+      <DependentUpon>main_mc_price.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\main_mc_price.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyMessageBox.Designer.vb">
+      <DependentUpon>MyMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_Actual Collection old.Designer.vb">
+      <DependentUpon>rpt_Actual Collection old.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_Actual Collection old.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_Actual_Releases.Designer.vb">
+      <DependentUpon>rpt_Actual_Releases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_Actual_Releases.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_cashieringOR.Designer.vb">
+      <DependentUpon>rpt_cashieringOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_cashieringOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_page.Designer.vb">
+      <DependentUpon>rpt_page.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_page.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPreviews\rpt_PreprintedReleaseDocs.designer.vb">
+      <DependentUpon>rpt_PreprintedReleaseDocs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreviews\rpt_PreprintedReleaseDocs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rpt_Receipt.Designer.vb">
+      <DependentUpon>rpt_Receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rpt_Receipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="Reports\ShowTotalCount.Designer.vb">
+      <DependentUpon>ShowTotalCount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ShowTotalCount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Show_PMT.Designer.vb">
+      <DependentUpon>Show_PMT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Show_PMT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Maintenance\SPA_Branch.designer.vb">
+      <DependentUpon>SPA_Branch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Maintenance\SPA_Branch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\QuickSearches\SPA_Customer_Freebie.designer.vb">
+      <DependentUpon>SPA_Customer_Freebie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\QuickSearches\SPA_Customer_Freebie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\QuickSearches\SPA_Search_CIF.designer.vb">
+      <DependentUpon>SPA_Search_CIF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\QuickSearches\SPA_Search_CIF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\QuickSearches\SPA_Search_Sales.designer.vb">
+      <DependentUpon>SPA_Search_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\QuickSearches\SPA_Search_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_InventoryAging.designer.vb">
+      <DependentUpon>SPA_InventoryAging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_InventoryAging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_MostExpensive.designer.vb">
+      <DependentUpon>SPA_MostExpensive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_MostExpensive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_PerSupplier.designer.vb">
+      <DependentUpon>SPA_PerSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_PerSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_TopMoving.designer.vb">
+      <DependentUpon>SPA_TopMoving.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_TopMoving.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_TopSelling.designer.vb">
+      <DependentUpon>SPA_TopSelling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\INVENTORY\SPA_TopSelling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_AcceptedTransfers.designer.vb">
+      <DependentUpon>SPA_AcceptedTransfers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_AcceptedTransfers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_IntransitReport.designer.vb">
+      <DependentUpon>SPA_IntransitReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_IntransitReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_Sales_CustDep.designer.vb">
+      <DependentUpon>SPA_Sales_CustDep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_Sales_CustDep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_Sales_Summary.designer.vb">
+      <DependentUpon>SPA_Sales_Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_Sales_Summary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_ShowDueCustDep.designer.vb">
+      <DependentUpon>SPA_ShowDueCustDep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_ShowDueCustDep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_TransmittalReport.designer.vb">
+      <DependentUpon>SPA_TransmittalReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\SPA_TransmittalReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\xRptReceivingApproved.designer.vb">
+      <DependentUpon>xRptReceivingApproved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\xRptReceivingApproved.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\xRptTransmittal_Outgoing.designer.vb">
+      <DependentUpon>xRptTransmittal_Outgoing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Reports\xRptTransmittal_Outgoing.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\frm_SubDealer.designer.vb">
+      <DependentUpon>frm_SubDealer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\frm_SubDealer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\Spare_Parts_Sales.Designer.vb">
+      <DependentUpon>Spare_Parts_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\Spare_Parts_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_AddCIF.designer.vb">
+      <DependentUpon>SPA_AddCIF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_AddCIF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_CustDep.designer.vb">
+      <DependentUpon>SPA_CustDep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_CustDep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_InputAmount.designer.vb">
+      <DependentUpon>SPA_InputAmount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_InputAmount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_Input_Quantity.designer.vb">
+      <DependentUpon>SPA_Input_Quantity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_Input_Quantity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_Sales.designer.vb">
+      <DependentUpon>SPA_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SALES\SPA_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Spare_Parts_Vendor.designer.vb">
+      <DependentUpon>Spare_Parts_Vendor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Spare_Parts_Vendor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Approved.designer.vb">
+      <DependentUpon>SPA_Approved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Approved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_BranchInventory.designer.vb">
+      <DependentUpon>SPA_BranchInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_BranchInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Checker_Approver_Outgoing.designer.vb">
+      <DependentUpon>SPA_Checker_Approver_Outgoing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Checker_Approver_Outgoing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Checker_Approver_Receiving.designer.vb">
+      <DependentUpon>SPA_Checker_Approver_Receiving.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Checker_Approver_Receiving.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_CRNo_Input.designer.vb">
+      <DependentUpon>SPA_CRNo_Input.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_CRNo_Input.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Disapproved.designer.vb">
+      <DependentUpon>SPA_Disapproved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Disapproved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_ErrorCorrect_Sales.designer.vb">
+      <DependentUpon>SPA_ErrorCorrect_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_ErrorCorrect_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_For_Approval.designer.vb">
+      <DependentUpon>SPA_For_Approval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_For_Approval.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_InTransit.designer.vb">
+      <DependentUpon>SPA_InTransit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_InTransit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Master.designer.vb">
+      <DependentUpon>SPA_Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Pending.designer.vb">
+      <DependentUpon>SPA_Pending.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Pending.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_ReceivingApproved.designer.vb">
+      <DependentUpon>SPA_ReceivingApproved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_ReceivingApproved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Sales_Inquiry.designer.vb">
+      <DependentUpon>SPA_Sales_Inquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Sales_Inquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Search_Sales_Inquiry.designer.vb">
+      <DependentUpon>SPA_Search_Sales_Inquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_Search_Sales_Inquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_SI_Inquiry.designer.vb">
+      <DependentUpon>SPA_SI_Inquiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\SPA_SI_Inquiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\UserControl\uc_SubDealer.designer.vb">
+      <DependentUpon>uc_SubDealer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\UserControl\uc_SubDealer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="splashes.Designer.vb">
+      <DependentUpon>splashes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="splashes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreens\FrmSplash.Designer.vb">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreens\FrmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreens\FrmWait.Designer.vb">
+      <DependentUpon>FrmWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreens\FrmWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administration\admin_acctCancel.resx">
+      <DependentUpon>admin_acctCancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_AutoUpdate.resx">
+      <DependentUpon>Admin_AutoUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_BroadcastMsg.resx">
+      <DependentUpon>Admin_BroadcastMsg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_CreditMemo.resx">
+      <DependentUpon>Admin_CreditMemo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_DisapprovedTransactions.resx">
+      <DependentUpon>Admin_DisapprovedTransactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\admin_errorcorrectcashiering.resx">
+      <DependentUpon>admin_errorcorrectcashiering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\admin_errorcorrectpayment.resx">
+      <DependentUpon>admin_errorcorrectpayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_MCPriceChecker.resx">
+      <DependentUpon>Admin_MCPriceChecker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\admin_MigrateAccount.resx">
+      <DependentUpon>admin_MigrateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_ReclassINVTY.resx">
+      <DependentUpon>Admin_ReclassINVTY.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_ReclassStatus.resx">
+      <DependentUpon>Admin_ReclassStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Admin_UpdateAccount.resx">
+      <DependentUpon>Admin_UpdateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIF\Customers_Information.resx">
+      <DependentUpon>Customers_Information.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIF\Customers_Information_find.resx">
+      <DependentUpon>Customers_Information_find.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CIF\frm_Customer_Information.resx">
+      <DependentUpon>frm_Customer_Information.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReference.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmReference.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashiering\IS_Cashiering_Transactions.resx">
+      <DependentUpon>IS_Cashiering_Transactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\frm_Summaries.resx">
+      <DependentUpon>frm_Summaries.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_FirstLoadSummaryTabular.resx">
+      <DependentUpon>IS_FirstLoadSummaryTabular.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_InquiryORNo.resx">
+      <DependentUpon>IS_InquiryORNo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_Inquiry_Refno.resx">
+      <DependentUpon>IS_Inquiry_Refno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_Inventory_DetailedSCategoryFindvb.resx">
+      <DependentUpon>IS_Inventory_DetailedSCategoryFindvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_Inventory_Detailed_SHistory.resx">
+      <DependentUpon>IS_Inventory_Detailed_SHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_MC_FromSuppler.resx">
+      <DependentUpon>IS_Inventory_MC_FromSuppler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Receiving.resx" />
+    <EmbeddedResource Include="Inventory\rpt_Inventory_DetailsRemarks.resx">
+      <DependentUpon>rpt_Inventory_DetailsRemarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreviews\Blank_rpt.resx">
+      <DependentUpon>Blank_rpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreviews\PortraitBlank.resx">
+      <DependentUpon>PortraitBlank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreviews\RPT_LTORegExpenses.resx">
+      <DependentUpon>RPT_LTORegExpenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreviews\xRptBranchInventory.resx">
+      <DependentUpon>xRptBranchInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreviews\xRptSales_Summary.resx">
+      <DependentUpon>xRptSales_Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory\rpt_inv_Inventory_ReceivingReport.resx">
+      <DependentUpon>rpt_inv_Inventory_ReceivingReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IS_Sales_DEPO_Monitoringvb.resx">
+      <DependentUpon>IS_Sales_DEPO_Monitoringvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IS_Sales_DEPO_Remarks.resx">
+      <DependentUpon>IS_Sales_DEPO_Remarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickSearches\IS_Sales_FindCust.resx">
+      <DependentUpon>IS_Sales_FindCust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_Inquiry_CustLedger.resx">
+      <DependentUpon>IS_Inquiry_CustLedger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Deduct.resx">
+      <DependentUpon>IS_Inventory_Deduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Deduct_item_find.resx">
+      <DependentUpon>IS_Inventory_Deduct_item_find.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_Inventory_DetailedSummary.resx">
+      <DependentUpon>IS_Inventory_DetailedSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_item_add.resx">
+      <DependentUpon>IS_Inventory_item_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_item_find.resx">
+      <DependentUpon>IS_Inventory_item_find.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Item_Inquiry.resx">
+      <DependentUpon>IS_Inventory_Item_Inquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickSearches\IS_Inventory_List.resx">
+      <DependentUpon>IS_Inventory_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Outgoing.resx">
+      <DependentUpon>IS_Inventory_Outgoing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Outgoing_item_find.resx">
+      <DependentUpon>IS_Inventory_Outgoing_item_find.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Outgoing_View.resx">
+      <DependentUpon>IS_Inventory_Outgoing_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Receiving_Cost.resx">
+      <DependentUpon>IS_Inventory_Receiving_Cost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Receiving_Cost_ADDCOST.resx">
+      <DependentUpon>IS_Inventory_Receiving_Cost_ADDCOST.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Receiving_Cost_ShowSI.resx">
+      <DependentUpon>IS_Inventory_Receiving_Cost_ShowSI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_Receiving_View.resx">
+      <DependentUpon>IS_Inventory_Receiving_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_TransactionReports.resx">
+      <DependentUpon>IS_Inventory_TransactionReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\IS_Inventory_TransactionReports_ApprovedTransfers.resx">
+      <DependentUpon>IS_Inventory_TransactionReports_ApprovedTransfers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiries\IS_Sales_Inquiry.resx">
+      <DependentUpon>IS_Sales_Inquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickSearches\IS_Sales_item_find.resx">
+      <DependentUpon>IS_Sales_item_find.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collection\IS_Sales_Payments.resx">
+      <DependentUpon>IS_Sales_Payments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreviews\RPT_ActualCollectionPrintPreview.resx">
+      <DependentUpon>RPT_ActualCollectionPrintPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\MC_ReleasesDocsMainFrm.resx">
+      <DependentUpon>MC_ReleasesDocsMainFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_AmortSched.resx">
+      <DependentUpon>rpt_rd_AmortSched.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_Certification.resx">
+      <DependentUpon>rpt_rd_Certification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_ChattelM.resx">
+      <DependentUpon>rpt_rd_ChattelM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_Computation.resx">
+      <DependentUpon>rpt_rd_Computation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_deedofreconveyance.resx">
+      <DependentUpon>rpt_rd_deedofreconveyance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_deedofsalewaom.resx">
+      <DependentUpon>rpt_rd_deedofsalewaom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_disclosurestatementolct.resx">
+      <DependentUpon>rpt_rd_disclosurestatementolct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_pulloutreceipt.resx">
+      <DependentUpon>rpt_rd_pulloutreceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Releases Documents\rpt_rd_waiver.resx">
+      <DependentUpon>rpt_rd_waiver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_AcctMasterlist.resx">
+      <DependentUpon>rpt_AcctMasterlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_ActualCollections.resx">
+      <DependentUpon>rpt_ActualCollections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_Cashiering.resx">
+      <DependentUpon>rpt_Cashiering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_ClosedAcct.resx">
+      <DependentUpon>rpt_ClosedAcct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_CollectionAging.resx">
+      <DependentUpon>rpt_CollectionAging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_CreditMemo.resx">
+      <DependentUpon>rpt_CreditMemo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_DEPtoREP.resx">
+      <DependentUpon>rpt_DEPtoREP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_InsuranceRpt.resx">
+      <DependentUpon>rpt_InsuranceRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_MCAccountPromo.resx">
+      <DependentUpon>rpt_MCAccountPromo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_MCForDepo.resx">
+      <DependentUpon>rpt_MCForDepo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_MCFreebieListing.resx">
+      <DependentUpon>rpt_MCFreebieListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_Report.resx">
+      <DependentUpon>rpt_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_ShowIBT.resx">
+      <DependentUpon>rpt_ShowIBT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IS_Sales_PreprintedReleaseDocs.resx">
+      <DependentUpon>IS_Sales_PreprintedReleaseDocs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collection\IS_Sales_RedeemOrNot.resx">
+      <DependentUpon>IS_Sales_RedeemOrNot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\IS_SALES_Release.resx">
+      <DependentUpon>IS_SALES_Release.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickSearches\IS_Sales_ReleaseAccount_List.resx">
+      <DependentUpon>IS_Sales_ReleaseAccount_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\IS_SALES_Release_View.resx">
+      <DependentUpon>IS_SALES_Release_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IS_SALES_Report_SALESfortoday.resx">
+      <DependentUpon>IS_SALES_Report_SALESfortoday.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IS_SALES_Report_SALESRange.resx">
+      <DependentUpon>IS_SALES_Report_SALESRange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\IS_Sales_ShowFreebie.resx">
+      <DependentUpon>IS_Sales_ShowFreebie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\MC_AcctDetailedRemarks.resx">
+      <DependentUpon>MC_AcctDetailedRemarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Controls\Xuc_Spare_Parts_Details.resx">
+      <DependentUpon>Xuc_Spare_Parts_Details.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Controls\Xuc_Spare_Parts_Sales.resx">
+      <DependentUpon>Xuc_Spare_Parts_Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\ErrorCorrect\SPA_ErrorCorrect.resx">
+      <DependentUpon>SPA_ErrorCorrect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\ErrorCorrect\SPA_Search_Sales_ErrorCorrect.resx">
+      <DependentUpon>SPA_Search_Sales_ErrorCorrect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Inventory\Outgoing\Search_SPA_fromWH.resx">
+      <DependentUpon>Search_SPA_fromWH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Inventory\Outgoing\SPA_Add_Outgoing.resx">
+      <DependentUpon>SPA_Add_Outgoing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Inventory\Outgoing\SPA_Outgoing.resx">
+      <DependentUpon>SPA_Outgoing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Inventory\Receiving\frm_Spare_Parts_Purchase_Orders.resx">
+      <DependentUpon>frm_Spare_Parts_Purchase_Orders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Inventory\Receiving\Search_Spare_Parts_PO.resx">
+      <DependentUpon>Search_Spare_Parts_PO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Inventory\Receiving\Spare_Parts_Add.resx">
+      <DependentUpon>Spare_Parts_Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Inventory\Receiving\SPA_Receiving.resx">
+      <DependentUpon>SPA_Receiving.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\IS_Sales_SP_temp.resx">
+      <DependentUpon>IS_Sales_SP_temp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\maint_ChangeApprover_Sales.resx">
+      <DependentUpon>maint_ChangeApprover_Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\maint_CustAccount.resx">
+      <DependentUpon>maint_CustAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\maint_terms_mc.resx">
+      <DependentUpon>maint_terms_mc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\main_mc_price.resx">
+      <DependentUpon>main_mc_price.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyMessageBox.resx">
+      <DependentUpon>MyMessageBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_Actual Collection old.resx">
+      <DependentUpon>rpt_Actual Collection old.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_Actual_Releases.resx">
+      <DependentUpon>rpt_Actual_Releases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_cashieringOR.resx">
+      <DependentUpon>rpt_cashieringOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_page.resx">
+      <DependentUpon>rpt_page.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreviews\rpt_PreprintedReleaseDocs.resx">
+      <DependentUpon>rpt_PreprintedReleaseDocs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt_Receipt.resx">
+      <DependentUpon>rpt_Receipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ShowTotalCount.resx">
+      <DependentUpon>ShowTotalCount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Show_PMT.resx">
+      <DependentUpon>Show_PMT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Maintenance\SPA_Branch.resx">
+      <DependentUpon>SPA_Branch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\QuickSearches\SPA_Customer_Freebie.resx">
+      <DependentUpon>SPA_Customer_Freebie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\QuickSearches\SPA_Search_CIF.resx">
+      <DependentUpon>SPA_Search_CIF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\QuickSearches\SPA_Search_Sales.resx">
+      <DependentUpon>SPA_Search_Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\INVENTORY\SPA_InventoryAging.resx">
+      <DependentUpon>SPA_InventoryAging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\INVENTORY\SPA_MostExpensive.resx">
+      <DependentUpon>SPA_MostExpensive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\INVENTORY\SPA_PerSupplier.resx">
+      <DependentUpon>SPA_PerSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\INVENTORY\SPA_TopMoving.resx">
+      <DependentUpon>SPA_TopMoving.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\INVENTORY\SPA_TopSelling.resx">
+      <DependentUpon>SPA_TopSelling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\SPA_AcceptedTransfers.resx">
+      <DependentUpon>SPA_AcceptedTransfers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\SPA_IntransitReport.resx">
+      <DependentUpon>SPA_IntransitReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\SPA_Sales_CustDep.resx">
+      <DependentUpon>SPA_Sales_CustDep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\SPA_Sales_Summary.resx">
+      <DependentUpon>SPA_Sales_Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\SPA_ShowDueCustDep.resx">
+      <DependentUpon>SPA_ShowDueCustDep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\SPA_TransmittalReport.resx">
+      <DependentUpon>SPA_TransmittalReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\xRptReceivingApproved.resx">
+      <DependentUpon>xRptReceivingApproved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Reports\xRptTransmittal_Outgoing.resx">
+      <DependentUpon>xRptTransmittal_Outgoing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SALES\frm_SubDealer.resx">
+      <DependentUpon>frm_SubDealer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SALES\Spare_Parts_Sales.resx">
+      <DependentUpon>Spare_Parts_Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SALES\SPA_AddCIF.resx">
+      <DependentUpon>SPA_AddCIF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SALES\SPA_CustDep.resx">
+      <DependentUpon>SPA_CustDep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SALES\SPA_InputAmount.resx">
+      <DependentUpon>SPA_InputAmount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SALES\SPA_Input_Quantity.resx">
+      <DependentUpon>SPA_Input_Quantity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SALES\SPA_Sales.resx">
+      <DependentUpon>SPA_Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Spare_Parts_Vendor.resx">
+      <DependentUpon>Spare_Parts_Vendor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Approved.resx">
+      <DependentUpon>SPA_Approved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_BranchInventory.resx">
+      <DependentUpon>SPA_BranchInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Checker_Approver_Outgoing.resx">
+      <DependentUpon>SPA_Checker_Approver_Outgoing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Checker_Approver_Receiving.resx">
+      <DependentUpon>SPA_Checker_Approver_Receiving.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_CRNo_Input.resx">
+      <DependentUpon>SPA_CRNo_Input.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Disapproved.resx">
+      <DependentUpon>SPA_Disapproved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_ErrorCorrect_Sales.resx">
+      <DependentUpon>SPA_ErrorCorrect_Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_For_Approval.resx">
+      <DependentUpon>SPA_For_Approval.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_InTransit.resx">
+      <DependentUpon>SPA_InTransit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Master.resx">
+      <DependentUpon>SPA_Master.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Pending.resx">
+      <DependentUpon>SPA_Pending.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_ReceivingApproved.resx">
+      <DependentUpon>SPA_ReceivingApproved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Sales_Inquiry.resx">
+      <DependentUpon>SPA_Sales_Inquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_Search_Sales_Inquiry.resx">
+      <DependentUpon>SPA_Search_Sales_Inquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\SPA_SI_Inquiry.resx">
+      <DependentUpon>SPA_SI_Inquiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\UserControl\uc_SubDealer.resx">
+      <DependentUpon>uc_SubDealer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashes.resx">
+      <DependentUpon>splashes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreens\FrmSplash.resx">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreens\FrmWait.resx">
+      <DependentUpon>FrmWait.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon32v32.ico" />
+    <Content Include="favicon64v64.ico" />
+    <None Include="Resources\customers 32v32.jpg" />
+    <None Include="Resources\Users-Add-User-icon %281%29.png" />
+    <None Include="Resources\sale 32v32.png" />
+    <None Include="Resources\customers 32v321.jpg" />
+    <None Include="Resources\folder.gif" />
+    <None Include="Resources\findcustomers_32x32.png" />
+    <None Include="Resources\autoexpand_32x32.png" />
+    <None Include="Resources\addheader_32x32.png" />
+    <None Include="Resources\addheader_16x16.png" />
+    <None Include="Resources\deleteheader_32x32.png" />
+    <None Include="Resources\deleteheader_16x16.png" />
+    <None Include="Resources\Motorcycle.png" />
+    <None Include="Resources\deletetablecolumns_32x32.png" />
+    <None Include="Resources\deletetablecolumns_16x16.png" />
+    <None Include="Resources\emptytablerowseparator_32x32.png" />
+    <None Include="Resources\emptytablerowseparator_16x16.png" />
+    <None Include="Resources\outgoing_32x32.png" />
+    <None Include="Resources\receiving_32x32.png" />
+    <None Include="Resources\spare parts.png" />
+    <None Include="Resources\bopivotchart_32x32.png" />
+    <None Include="Resources\bopivotchart_16x16.png" />
+    <None Include="Resources\monthview_32x32.png" />
+    <None Include="Resources\monthview_16x16.png" />
+    <None Include="Resources\statistical_32x32.png" />
+    <None Include="Resources\statistical_16x16.png" />
+    <None Include="Resources\financial_32x32.png" />
+    <None Include="Resources\financial_16x16.png" />
+    <None Include="Resources\differentoddevenpages_32x32.png" />
+    <None Include="Resources\differentoddevenpages_16x16.png" />
+    <None Include="Resources\report2_32x32.png" />
+    <None Include="Resources\report2_16x16.png" />
+    <None Include="Resources\createmodeldifferences_32x32.png" />
+    <None Include="Resources\createmodeldifferences_16x16.png" />
+    <None Include="Resources\namemanager_32x32.png" />
+    <None Include="Resources\namemanager_16x16.png" />
+    <None Include="Resources\palette_32x32.png" />
+    <None Include="Resources\palette_16x16.png" />
+    <None Include="Resources\bocountry_32x32.png" />
+    <None Include="Resources\bocountry_16x16.png" />
+    <None Include="Resources\defaultmap_32x32.png" />
+    <None Include="Resources\defaultmap_16x16.png" />
+    <None Include="Resources\products_32x32.png" />
+    <None Include="Resources\products_16x16.png" />
+    <None Include="Resources\home_32x32.png" />
+    <None Include="Resources\home_16x16.png" />
+    <None Include="Resources\inbox_32x32.png" />
+    <None Include="Resources\inbox_16x16.png" />
+    <None Include="Resources\grandtotalsoffrowscolumnspivottable_32x32.png" />
+    <None Include="Resources\grandtotalsoffrowscolumnspivottable_16x16.png" />
+    <None Include="Resources\inlinesizelegend_32x32.png" />
+    <None Include="Resources\inlinesizelegend_16x16.png" />
+    <None Include="Resources\servermode_32x32.png" />
+    <None Include="Resources\servermode_16x16.png" />
+    <None Include="Resources\deletegroupheader_32x32.png" />
+    <None Include="Resources\deletegroupheader_16x16.png" />
+    <None Include="Resources\user_32x32.png" />
+    <None Include="Resources\user_16x16.png" />
+    <None Include="Resources\documentmap_32x32.png" />
+    <None Include="Resources\documentmap_16x16.png" />
+    <None Include="Resources\newitem_32x32.png" />
+    <None Include="Resources\newitem_16x16.png" />
+    <None Include="Resources\converttoparagraphs_32x32.png" />
+    <None Include="Resources\converttoparagraphs_16x16.png" />
+    <None Include="Resources\snapemptyparagraphseparator_32x32.png" />
+    <None Include="Resources\snapemptyparagraphseparator_16x16.png" />
+    <None Include="Resources\bouser_32x32.png" />
+    <None Include="Resources\bouser_16x16.png" />
+    <None Include="Resources\usergroup_32x32.png" />
+    <None Include="Resources\usergroup_16x16.png" />
+    <None Include="Resources\newitem_32x321.png" />
+    <None Include="Resources\newitem_16x161.png" />
+    <None Include="Resources\deletelist_32x32.png" />
+    <None Include="Resources\deletelist_16x16.png" />
+    <None Include="Resources\bouser_32x321.png" />
+    <None Include="Resources\bouser_16x161.png" />
+    <None Include="Resources\bocustomer_32x32.png" />
+    <None Include="Resources\bocustomer_16x16.png" />
+    <None Include="Resources\LOGO SAGA.gif" />
+    <None Include="Resources\LOGO SAGA NEW.jpg" />
+    <None Include="Resources\thecodex.jpg" />
+    <None Include="Resources\switch user.png" />
+    <None Include="Resources\loc2k.jpg" />
+    <None Include="Resources\User-blue-icon.png" />
+    <None Include="Resources\Business.JPG" />
+    <None Include="Resources\date.jpg" />
+    <None Include="Resources\Time.png" />
+    <Content Include="SERVICE.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>False</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\MyClassLibrary\MyClassLibrary.csproj">
+      <Project>{710fbcc8-3d66-04c1-0e0d-77edfb72de3a}</Project>
+      <Name>MyClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SagaClassLibrary\SagaClassLibrary.vbproj">
+      <Project>{06AF29CC-B60F-407D-AAB0-AA5BDA827326}</Project>
+      <Name>SagaClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SagaInventory\SagaInventory.vbproj">
+      <Project>{d18438e9-b948-44fb-8488-48d27973b030}</Project>
+      <Name>SagaInventory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SagaSpareParts\SagaSpareParts.vbproj">
+      <Project>{af947420-6eb6-4caf-9791-6547300affe9}</Project>
+      <Name>SagaSpareParts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BranchAccounting\BranchAccounting.vbproj">
+      <Project>{6e4d196e-3b1d-4b5f-bd92-bada1151598d}</Project>
+      <Name>BranchAccounting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SagaSupport\SagaSupport.csproj">
+      <Project>{e41958e3-deb8-0801-3fc3-202a699fa2d6}</Project>
+      <Name>SagaSupport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\wSClassLib\wSClassLib.vbproj">
+      <Project>{fb712c20-8cc0-497c-a1c4-cc7efeb1a1fb}</Project>
+      <Name>wSClassLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

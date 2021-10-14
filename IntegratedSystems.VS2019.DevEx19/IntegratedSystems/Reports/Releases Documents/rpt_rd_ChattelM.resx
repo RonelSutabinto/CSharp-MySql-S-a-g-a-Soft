@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XrLabel30.Text" xml:space="preserve">
+    <value>          This Deed of Chattel Mortgage, consisting of two (2) pages, including this page on which this acknowledgment is written, has been signed on the left margin of each and every page thereof by the parties and their witnesses and sealed with my notarial seal.</value>
+  </data>
+  <data name="XrLabel29.Text" xml:space="preserve">
+    <value>with their competent evidence of identity as per data indicated above, known to me to be the same persons named in and who executed the foregoing deed and they acknowledged under oath to me under penalty of law that the execution of the same is of their own free and voluntary act and deed.</value>
+  </data>
+  <data name="XrLabel18.Text" xml:space="preserve">
+    <value>          WE, the undersigned MORTGAGOR and MORTGAGEE, severally swear that the foregoing chattel mortgage is made and executed for the purpose of securing the obligation specified therein, and for no other purpose, and that  the same  is  a just and valid obligation, and one  not  entered into for the purpose of fraud.</value>
+  </data>
+  <data name="XrLabel16.Text" xml:space="preserve">
+    <value>          6. That the condition of this chattel mortgage is such that if the MORTGAGOR, his/her legal representatives,  heirs,  assigns, executors,  or administrators shall well and  truly  perform the  full  obligation above stated according to the terms hereof, then this chattel mortgage shall be null and  void; otherwise,  it  shall remain in full force  and  effect  and shall be enforceable in the manner provided for by law.</value>
+  </data>
+  <data name="XrLabel15.Text" xml:space="preserve">
+    <value>          5. That the MORTGAGOR shall at all times insure the chattel herein mortgaged against loss or damages by fire, theft, robbery, or accident for the duration of this contract with an insurance company acceptable to the MORTGAGEE in an amount not less than the loan herein secured which shall be payable to the MORTGAGEE or its assignees and deliver such policy to the MORTGAGEE within five (5) days upon issuance thereof. The MORTGAGEE however may, at its option, but without any obligation to do so, effect such insurance for the account of the MORTGAGOR, the amount of which shall be added to the principal indebtedness and shall also be secured by this mortgage;</value>
+  </data>
+  <data name="XrLabel14.Text" xml:space="preserve">
+    <value>          4. That in case of default or failure of the MORTGAGOR to pay any two (2) consecutive monthly installments due or to comply with the terms and conditions of this chattel mortgage, the whole amount remaining unpaid shall become due and payable and the MORTGAGEE may either take immediate possession of the chattel herein mortgaged without the necessity of any judicial order and the MORTGAGEE is hereby designated or appointed as the MORTGAGOR's attorney-in-fact with specific authority to dispose of the chattel, in a manner consistent with law, so that the mortgaged debt can be fully satisfied; to foreclose the chattel mortgaged herein constituted, judicially or extra-judicially, as provided for by law; and/or file for an ordinary civil action for the fulfillment of the mortgage contract;</value>
+  </data>
+  <data name="XrLabel13.Text" xml:space="preserve">
+    <value>          3. That the MORTGAGOR agrees to pay a monthly penalty charge of ______ percent (___%) on all overdue and unpaid monthly installments from due date until paid and in case of litigation, to pay for Attorney’s fees of Twenty percent (20%) on the total amount due plus litigation expenses;</value>
+  </data>
+  <data name="XrLabel4.Text" xml:space="preserve">
+    <value>          1. That the MORTGAGOR hereby transfers and conveys by way of chattel mortgage to the MORTGAGEE,  its  successors  and  assigns,  the following  described  personal  property  situated       and ordinarily kept in ________________________________________________________________, now in the possession of the MORTGAGOR unencumbered and free from all claims whatsoever of any person or entity, to wit:</value>
+  </data>
+  <data name="XrLabel2.Text" xml:space="preserve">
+    <value>          This DEED OF CHATTEL MORTGAGE, executed this ______ day of ____________,_______, by _______________________________________________, Filipino citizen, single/married/widow(er), of legal age and a resident of _____________________________________________, hereinafter referred to as the “MORTGAGOR”, and SAGA FINANCE CORPORATION, a corporation duly organized and existing under and by virtue of Philippine laws with business address at ___________________________________________________, represented in this instance by its duly authorized representative, ______________________________________________, hereinafter referred to as the “MORTGAGEE”; </value>
+  </data>
+  <data name="XrLabel11.Text" xml:space="preserve">
+    <value>          2. That the said chattel is given as security for the payment of a loan obtained by the MORTGAGOR    from    the       MORTGAGEE   in   the amount of _____________________________________________________________________________________ (______________________), Philippine currency, payable with interest at the rate of _______________ percent (______________%) per annum, in accordance with the following payment schedule:</value>
+  </data>
+</root>

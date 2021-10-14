@@ -1,0 +1,13 @@
+﻿<XtraSerializer version="1.0" application="Appearances">
+  <property name="Properties.AppearanceReadOnly" iskey="true" value="Properties.AppearanceReadOnly">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseForeColor">true</property>
+      <property name="UseBorderColor">true</property>
+      <property name="UseBackColor">true</property>
+    </property>
+    <property name="ForeColor">Black</property>
+    <property name="BorderColor">Black</property>
+    <property name="BackColor">White</property>
+    <property name="BackColor2">White</property>
+  </property>
+</XtraSerializer>

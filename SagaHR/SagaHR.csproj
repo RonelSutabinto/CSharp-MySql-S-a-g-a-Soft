@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F225DD8D-ED61-47A3-ABE1-0A6A21D52659}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SagaHR</RootNamespace>
+    <AssemblyName>SagaHR</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\inetpub\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v21.1" />
+    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1" />
+    <Reference Include="DevExpress.Data.v21.1" />
+    <Reference Include="DevExpress.Mvvm.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core" />
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v21.1" />
+    <Reference Include="DevExpress.Printing.v21.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\class_HR_Procedures.cs" />
+    <Compile Include="Controls\xuc_Leave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Leave.Designer.cs">
+      <DependentUpon>xuc_Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Payroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Payroll.Designer.cs">
+      <DependentUpon>xuc_Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Schedule_Type.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Schedule_Type.Designer.cs">
+      <DependentUpon>xuc_Schedule_Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Salary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Salary.Designer.cs">
+      <DependentUpon>xuc_Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Adjustment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Adjustment.Designer.cs">
+      <DependentUpon>xuc_Adjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Employee.Designer.cs">
+      <DependentUpon>xuc_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Schedule_Types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Schedule_Types.Designer.cs">
+      <DependentUpon>frm_Schedule_Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Payroll.Designer.cs">
+      <DependentUpon>frm_Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Pay_Checks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Pay_Checks.Designer.cs">
+      <DependentUpon>frm_Pay_Checks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Payrolls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Payrolls.Designer.cs">
+      <DependentUpon>frm_Payrolls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Salary.Designer.cs">
+      <DependentUpon>frm_Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Leaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Leaves.Designer.cs">
+      <DependentUpon>frm_Leaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Leave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Leave.Designer.cs">
+      <DependentUpon>frm_Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Adjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Adjustment.Designer.cs">
+      <DependentUpon>frm_Adjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Salaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Salaries.Designer.cs">
+      <DependentUpon>frm_Salaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Employee.Designer.cs">
+      <DependentUpon>frm_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Adjustments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Adjustments.Designer.cs">
+      <DependentUpon>frm_Adjustments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Employees.Designer.cs">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainView.Designer.cs">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\xrpt_Pay_Slip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrpt_Pay_Slip.Designer.cs">
+      <DependentUpon>xrpt_Pay_Slip.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\xuc_Employee.resx">
+      <DependentUpon>xuc_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_Leave.resx">
+      <DependentUpon>xuc_Leave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_Payroll.resx">
+      <DependentUpon>xuc_Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_Schedule_Type.resx">
+      <DependentUpon>xuc_Schedule_Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_Salary.resx">
+      <DependentUpon>xuc_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_Adjustment.resx">
+      <DependentUpon>xuc_Adjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Schedule_Types.resx">
+      <DependentUpon>frm_Schedule_Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Leaves.resx">
+      <DependentUpon>frm_Leaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Pay_Checks.resx">
+      <DependentUpon>frm_Pay_Checks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Payrolls.resx">
+      <DependentUpon>frm_Payrolls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Salaries.resx">
+      <DependentUpon>frm_Salaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Adjustments.resx">
+      <DependentUpon>frm_Adjustments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Employees.resx">
+      <DependentUpon>frm_Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Salary.resx">
+      <DependentUpon>frm_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\xrpt_Pay_Slip.resx">
+      <DependentUpon>xrpt_Pay_Slip.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MyClassLibrary\MyClassLibrary.csproj">
+      <Project>{710fbcc8-3d66-04c1-0e0d-77edfb72de3a}</Project>
+      <Name>MyClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SagaClassLibrary\SagaClassLibrary.vbproj">
+      <Project>{06af29cc-b60f-407d-aab0-aa5bda827326}</Project>
+      <Name>SagaClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

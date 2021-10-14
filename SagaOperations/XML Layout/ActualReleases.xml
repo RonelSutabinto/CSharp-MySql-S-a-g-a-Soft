@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion"></property>
+  <property name="AppearancePrint" isnull="true" iskey="true">
+    <property name="EvenRow" iskey="true" value="EvenRow">
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseFont">true</property>
+      </property>
+      <property name="Font">Calibri, 9.75pt, style=Bold</property>
+    </property>
+  </property>
+  <property name="VertScrollTipFieldName"></property>
+  <property name="PreviewFieldName"></property>
+  <property name="GroupPanelText"></property>
+  <property name="NewItemRowText"></property>
+  <property name="LevelIndent">-1</property>
+  <property name="PreviewIndent">-1</property>
+  <property name="PreviewLineCount">-1</property>
+  <property name="ScrollStyle">LiveVertScroll, LiveHorzScroll</property>
+  <property name="FocusRectStyle">CellFocus</property>
+  <property name="HorzScrollStep">3</property>
+  <property name="ViewCaptionHeight">-1</property>
+  <property name="Columns" iskey="true" value="34">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Width">52</property>
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">0</property>
+      <property name="Name">BranchCode</property>
+      <property name="Caption">Branch</property>
+      <property name="FieldName">BranchCode</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">1</property>
+      <property name="Name">AccountNumber</property>
+      <property name="Caption">AccountNumber</property>
+      <property name="FieldName">AccountNumber</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">2</property>
+      <property name="Name">LedSet</property>
+      <property name="Caption">LedSet</property>
+      <property name="FieldName">LedSet</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">3</property>
+      <property name="Name">AccountName</property>
+      <property name="Caption">AccountName</property>
+      <property name="FieldName">AccountName</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">4</property>
+      <property name="Name">Terms</property>
+      <property name="Caption">Terms</property>
+      <property name="FieldName">Terms</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">5</property>
+      <property name="Name">IntRate</property>
+      <property name="Caption">IntRate</property>
+      <property name="FieldName">IntRate</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">6</property>
+      <property name="Name">DateGranted</property>
+      <property name="Caption">DateGranted</property>
+      <property name="FieldName">DateGranted</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">7</property>
+      <property name="Name">FPDate</property>
+      <property name="Caption">FPDate</property>
+      <property name="FieldName">FPDate</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">8</property>
+      <property name="Name">MaturityDate</property>
+      <property name="Caption">MaturityDate</property>
+      <property name="FieldName">MaturityDate</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">9</property>
+      <property name="Name">brand</property>
+      <property name="Caption">Brand</property>
+      <property name="FieldName">brand</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">10</property>
+      <property name="Name">descriptions</property>
+      <property name="Caption">Description</property>
+      <property name="FieldName">descriptions</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">11</property>
+      <property name="Name">SINumber</property>
+      <property name="Caption">SINumber</property>
+      <property name="FieldName">SINumber</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">12</property>
+      <property name="Name">CRNumber</property>
+      <property name="Caption">CRNumber</property>
+      <property name="FieldName">CRNumber</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">13</property>
+      <property name="Name">SalesType</property>
+      <property name="Caption">SalesType</property>
+      <property name="FieldName">SalesType</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">14</property>
+      <property name="Name">whCode</property>
+      <property name="Caption">whCode</property>
+      <property name="FieldName">whCode</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">15</property>
+      <property name="Name">TAG</property>
+      <property name="Caption">TAG</property>
+      <property name="FieldName">TAG</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">16</property>
+      <property name="Name">engineno</property>
+      <property name="Caption">engineno</property>
+      <property name="FieldName">engineno</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">17</property>
+      <property name="Name">chassisno</property>
+      <property name="Caption">chassisno</property>
+      <property name="FieldName">chassisno</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">18</property>
+      <property name="Name">keyno</property>
+      <property name="Caption">keyno</property>
+      <property name="FieldName">keyno</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">19</property>
+      <property name="Name">MA</property>
+      <property name="Caption">MA</property>
+      <property name="FieldName">MA</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">20</property>
+      <property name="Name">COD</property>
+      <property name="Caption">COD</property>
+      <property name="FieldName">COD</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">21</property>
+      <property name="Name">LCP</property>
+      <property name="Caption">LCP</property>
+      <property name="FieldName">LCP</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">22</property>
+      <property name="Name">AOC</property>
+      <property name="Caption">AOC</property>
+      <property name="FieldName">AOC</property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">23</property>
+      <property name="Name">Rebates</property>
+      <property name="Caption">Rebates</property>
+      <property name="FieldName">Rebates</property>
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">24</property>
+      <property name="Name">FinanceAmnt</property>
+      <property name="Caption">FinanceAmnt</property>
+      <property name="FieldName">FinanceAmnt</property>
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">25</property>
+      <property name="Name">unitcost</property>
+      <property name="Caption">unitcost</property>
+      <property name="FieldName">unitcost</property>
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">26</property>
+      <property name="Name">vatamt</property>
+      <property name="Caption">vatamt</property>
+      <property name="FieldName">vatamt</property>
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">27</property>
+      <property name="Name">VAT</property>
+      <property name="Caption">VAT</property>
+      <property name="FieldName">VAT</property>
+    </property>
+    <property name="Item29" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">28</property>
+      <property name="Name">AmntNetOfVat</property>
+      <property name="Caption">AmntNetOfVat</property>
+      <property name="FieldName">AmntNetOfVat</property>
+    </property>
+    <property name="Item30" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">29</property>
+      <property name="Name">SC_PWDDiscount</property>
+      <property name="Caption">SC_PWDDiscount</property>
+      <property name="FieldName">SC_PWDDiscount</property>
+    </property>
+    <property name="Item31" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">30</property>
+      <property name="Name">PrincipalBalance</property>
+      <property name="Caption">PrincipalBalance</property>
+      <property name="FieldName">PrincipalBalance</property>
+    </property>
+    <property name="Item32" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">31</property>
+      <property name="Name">InterestBalance</property>
+      <property name="Caption">InterestBalance</property>
+      <property name="FieldName">InterestBalance</property>
+    </property>
+    <property name="Item33" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">32</property>
+      <property name="Name">Corp</property>
+      <property name="Caption">Corp</property>
+      <property name="FieldName">Corp</property>
+    </property>
+    <property name="Item34" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="ColumnEditName"></property>
+      <property name="VisibleIndex">33</property>
+      <property name="Name">Branch</property>
+      <property name="Caption">Branch</property>
+      <property name="FieldName">Branch</property>
+    </property>
+  </property>
+  <property name="ViewCaption"></property>
+  <property name="BorderStyle">Default</property>
+  <property name="SynchronizeClones">true</property>
+  <property name="DetailTabHeaderLocation">Top</property>
+  <property name="Name">GridView</property>
+  <property name="DetailHeight">350</property>
+  <property name="Tag" isnull="true" />
+  <property name="ChildGridLevelName"></property>
+  <property name="GroupFormat">{0}: [#image]{1} {2}</property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="GroupRowHeight">-1</property>
+  <property name="OptionsBehavior" isnull="true" iskey="true">
+    <property name="Editable">false</property>
+    <property name="AutoExpandAllGroups">true</property>
+    <property name="AllowIncrementalSearch">true</property>
+  </property>
+  <property name="FixedLineWidth">2</property>
+  <property name="OptionsPrint" isnull="true" iskey="true">
+    <property name="AllowMultilineHeaders">true</property>
+    <property name="UsePrintStyles">false</property>
+    <property name="PrintSelectedRowsOnly">true</property>
+    <property name="PrintPreview">true</property>
+    <property name="PrintFilterInfo">true</property>
+    <property name="PrintDetails">true</property>
+    <property name="ExpandAllDetails">true</property>
+    <property name="EnableAppearanceEvenRow">true</property>
+    <property name="EnableAppearanceOddRow">true</property>
+  </property>
+  <property name="OptionsSelection" isnull="true" iskey="true">
+    <property name="MultiSelect">true</property>
+  </property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="ShowFooter">true</property>
+    <property name="ColumnAutoWidth">false</property>
+  </property>
+  <property name="ColumnPanelRowHeight">-1</property>
+  <property name="RowSeparatorHeight">0</property>
+  <property name="FooterPanelHeight">-1</property>
+  <property name="HorzScrollVisibility">Always</property>
+  <property name="VertScrollVisibility">Always</property>
+  <property name="RowHeight">-1</property>
+  <property name="IndicatorWidth">-1</property>
+  <property name="Appearance" isnull="true" iskey="true">
+    <property name="HeaderPanel" iskey="true" value="HeaderPanel">
+      <property name="Options" isnull="true" iskey="true">
+        <property name="UseForeColor">true</property>
+        <property name="UseBorderColor">true</property>
+        <property name="UseBackColor">true</property>
+        <property name="UseFont">true</property>
+      </property>
+      <property name="ForeColor">Black</property>
+      <property name="BorderColor">Black</property>
+      <property name="BackColor">White</property>
+      <property name="BackColor2">White</property>
+      <property name="Font">Calibri, 9.75pt, style=Bold</property>
+    </property>
+  </property>
+  <property name="FormatRules" iskey="true" value="0" />
+  <property name="ActiveFilterString"></property>
+  <property name="FormatConditions" iskey="true" value="0" />
+  <property name="GroupSummary" iskey="true" value="0" />
+  <property name="GroupSummarySortInfoState"></property>
+  <property name="FindFilterText"></property>
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

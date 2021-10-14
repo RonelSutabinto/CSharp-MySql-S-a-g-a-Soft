@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D18438E9-B948-44FB-8488-48D27973B030}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>SagaInventory</RootNamespace>
+    <AssemblyName>SagaInventory</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\..\..\..\..\inetpub\</OutputPath>
+    <DocumentationFile>SagaInventory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SagaInventory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Motorcycle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.1.Drawing, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Preferences\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\xuc_Asset_Entry.Designer.vb">
+      <DependentUpon>xuc_Asset_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Asset_Entry.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Master_Entry.Designer.vb">
+      <DependentUpon>xuc_Master_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Master_Entry.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_iREP_Units.Designer.vb">
+      <DependentUpon>xuc_iREP_Units.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_iREP_Units.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_MC_Reprice.Designer.vb">
+      <DependentUpon>xuc_MC_Reprice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_MC_Reprice.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_PO_Entry.Designer.vb">
+      <DependentUpon>xuc_PO_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_PO_Entry.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_Reprice.Designer.vb">
+      <DependentUpon>xuc_Reprice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_Reprice.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\xuc_REP_Units.Designer.vb">
+      <DependentUpon>xuc_REP_Units.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\xuc_REP_Units.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inventory\Master_List.Designer.vb">
+      <DependentUpon>Master_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Master_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Class_Inventory_Modules.vb" />
+    <Compile Include="Motors\iREP\frm_iREP_Units.Designer.vb">
+      <DependentUpon>frm_iREP_Units.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motors\iREP\frm_iREP_Units.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motors\iREP\frm_Repricing_List_iREP.Designer.vb">
+      <DependentUpon>frm_Repricing_List_iREP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motors\iREP\frm_Repricing_List_iREP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motors\iREP\frm_Rep_to_IRep.Designer.vb">
+      <DependentUpon>frm_Rep_to_IRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motors\iREP\frm_Rep_to_IRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motors\MC_For_Reprice.Designer.vb">
+      <DependentUpon>MC_For_Reprice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motors\MC_For_Reprice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motors\PriceList_Summary.Designer.vb">
+      <DependentUpon>PriceList_Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motors\PriceList_Summary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motors\Reprice.Designer.vb">
+      <DependentUpon>Reprice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motors\Reprice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Motors\Repricing_List.Designer.vb">
+      <DependentUpon>Repricing_List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Motors\Repricing_List.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Program.vb" />
+    <Compile Include="Reports\XRpt_Repo_PriceList.Designer.vb">
+      <DependentUpon>XRpt_Repo_PriceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XRpt_Repo_PriceList.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Spare Parts\Master Inventory\Spare Parts MasterList.Designer.vb">
+      <DependentUpon>Spare Parts MasterList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Spare Parts\Master Inventory\Spare Parts MasterList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\xuc_Asset_Entry.resx">
+      <DependentUpon>xuc_Asset_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_Master_Entry.resx">
+      <DependentUpon>xuc_Master_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_iREP_Units.resx">
+      <DependentUpon>xuc_iREP_Units.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_MC_Reprice.resx">
+      <DependentUpon>xuc_MC_Reprice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_PO_Entry.resx">
+      <DependentUpon>xuc_PO_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_Reprice.resx">
+      <DependentUpon>xuc_Reprice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\xuc_REP_Units.resx">
+      <DependentUpon>xuc_REP_Units.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\Master_List.resx">
+      <DependentUpon>Master_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motors\iREP\frm_iREP_Units.resx">
+      <DependentUpon>frm_iREP_Units.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motors\iREP\frm_Repricing_List_iREP.resx">
+      <DependentUpon>frm_Repricing_List_iREP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motors\iREP\frm_Rep_to_IRep.resx">
+      <DependentUpon>frm_Rep_to_IRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motors\MC_For_Reprice.resx">
+      <DependentUpon>MC_For_Reprice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motors\PriceList_Summary.resx">
+      <DependentUpon>PriceList_Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motors\Reprice.resx">
+      <DependentUpon>Reprice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Motors\Repricing_List.resx">
+      <DependentUpon>Repricing_List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XRpt_Repo_PriceList.resx">
+      <DependentUpon>XRpt_Repo_PriceList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare Parts\Master Inventory\Spare Parts MasterList.resx">
+      <DependentUpon>Spare Parts MasterList.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyClassLibrary\MyClassLibrary.csproj">
+      <Project>{710fbcc8-3d66-04c1-0e0d-77edfb72de3a}</Project>
+      <Name>MyClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SagaClassLibrary\SagaClassLibrary.vbproj">
+      <Project>{06af29cc-b60f-407d-aab0-aa5bda827326}</Project>
+      <Name>SagaClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Motorcycle.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

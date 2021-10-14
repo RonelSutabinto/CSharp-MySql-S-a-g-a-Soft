@@ -1,0 +1,1737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06AF29CC-B60F-407D-AAB0-AA5BDA827326}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SagaClassLibrary</RootNamespace>
+    <AssemblyName>SagaClassLibrary</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>False</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>False</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>False</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>False</UpdateAssemblyInfoVersion>
+    <AssemblyVersionSettings>
+    </AssemblyVersionSettings>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>None</InheritWinAppVersionFrom>
+    <AssemblyFileVersionSettings>
+    </AssemblyFileVersionSettings>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\..\..\..\..\inetpub\</OutputPath>
+    <DocumentationFile>SagaClassLibrary.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SagaClassLibrary.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="AutoUpdater.NET, Version=1.6.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Preferences\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DotNetZip">
+      <HintPath>..\Preferences\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Preferences\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Accounting\xuc_Account_Summary.Designer.vb">
+      <DependentUpon>xuc_Account_Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Account_Summary.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Balance_Import.Designer.vb">
+      <DependentUpon>xuc_Balance_Import.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Balance_Import.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Bank.Designer.vb">
+      <DependentUpon>xuc_Bank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Bank.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Budget.Designer.vb">
+      <DependentUpon>xuc_Budget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Budget.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Chart_Of_Account.Designer.vb">
+      <DependentUpon>xuc_Chart_Of_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Chart_Of_Account.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Check.Designer.vb">
+      <DependentUpon>xuc_Check.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Check.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Grid_Cashiering.Designer.vb">
+      <DependentUpon>xuc_Grid_Cashiering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Grid_Cashiering.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Grid_Collection.Designer.vb">
+      <DependentUpon>xuc_Grid_Collection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Grid_Collection.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Grid_Journal_References.Designer.vb">
+      <DependentUpon>xuc_Grid_Journal_References.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Grid_Journal_References.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Journal_Entries.Designer.vb">
+      <DependentUpon>xuc_Journal_Entries.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Journal_Entries.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Journal_Entry.Designer.vb">
+      <DependentUpon>xuc_Journal_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Journal_Entry.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Journal_Profile.Designer.vb">
+      <DependentUpon>xuc_Journal_Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Journal_Profile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_MC_Promo.Designer.vb">
+      <DependentUpon>xuc_MC_Promo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_MC_Promo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Payment_Request.Designer.vb">
+      <DependentUpon>xuc_Payment_Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Payment_Request.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Trial_Balance_Tree.Designer.vb">
+      <DependentUpon>xuc_Trial_Balance_Tree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Trial_Balance_Tree.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Item\xuc_Brand.Designer.vb">
+      <DependentUpon>xuc_Brand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Item\xuc_Brand.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Inclusion_Inventory.Designer.vb">
+      <DependentUpon>xuc_Inclusion_Inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Inclusion_Inventory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Inclusion.Designer.vb">
+      <DependentUpon>xuc_Inclusion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Inclusion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Purchase_Order_Units.Designer.vb">
+      <DependentUpon>xuc_Purchase_Order_Units.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Purchase_Order_Units.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_MC_Transaction_Units.Designer.vb">
+      <DependentUpon>xuc_MC_Transaction_Units.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_MC_Transaction_Units.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_MC_Request.Designer.vb">
+      <DependentUpon>xuc_MC_Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_MC_Request.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Purchase_Order.Designer.vb">
+      <DependentUpon>xuc_Purchase_Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Purchase_Order.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_MC_Transaction.Designer.vb">
+      <DependentUpon>xuc_MC_Transaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_MC_Transaction.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Unit_Invoice.Designer.vb">
+      <DependentUpon>xuc_Unit_Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Unit_Invoice.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Petty_Cash\xuc_Expense.designer.vb">
+      <DependentUpon>xuc_Expense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Petty_Cash\xuc_Expense.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Petty_Cash\xuc_Petty_Cash_Profile.Designer.vb">
+      <DependentUpon>xuc_Petty_Cash_Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Petty_Cash\xuc_Petty_Cash_Profile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Voucher.Designer.vb">
+      <DependentUpon>xuc_Voucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounting\xuc_Voucher.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account.Designer.vb">
+      <DependentUpon>xuc_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Accounts.Designer.vb">
+      <DependentUpon>xuc_Accounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Accounts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Application.Designer.vb">
+      <DependentUpon>xuc_Account_Application.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Application.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Ledger.Designer.vb">
+      <DependentUpon>xuc_Account_Ledger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Ledger.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Payment.Designer.vb">
+      <DependentUpon>xuc_Account_Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Payment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Search.Designer.vb">
+      <DependentUpon>xuc_Account_Search.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Account_Search.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Grid_Ledger.Designer.vb">
+      <DependentUpon>xuc_Grid_Ledger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Account\xuc_Grid_Ledger.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Item\xuc_Color.Designer.vb">
+      <DependentUpon>xuc_Color.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Item\xuc_Color.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information\Item\xuc_Model.Designer.vb">
+      <DependentUpon>xuc_Model.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information\Item\xuc_Model.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Transport.Designer.vb">
+      <DependentUpon>xuc_Transport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Transport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Unit_Inventory.Designer.vb">
+      <DependentUpon>xuc_Unit_Inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Logistics\xuc_Unit_Inventory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Management\xuc_Branch.Designer.vb">
+      <DependentUpon>xuc_Branch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Management\xuc_Branch.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Account_Excutive.Designer.vb">
+      <DependentUpon>xuc_Account_Excutive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Account_Excutive.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Account_Name.Designer.vb">
+      <DependentUpon>xuc_Account_Name.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Account_Name.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Agent.Designer.vb">
+      <DependentUpon>xuc_Agent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Agent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Customer.Designer.vb">
+      <DependentUpon>xuc_Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Customer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Printing_Detail.Designer.vb">
+      <DependentUpon>xuc_Printing_Detail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_Printing_Detail.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_User.Designer.vb">
+      <DependentUpon>xuc_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Persons\xuc_User.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Custom\xuc_Error_Report.Designer.vb">
+      <DependentUpon>xuc_Error_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Custom\xuc_Error_Report.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Payment_Request.Designer.vb">
+      <DependentUpon>frm_Payment_Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Payment_Request.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_MC_Promotions.Designer.vb">
+      <DependentUpon>frm_MC_Promotions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_MC_Promotions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Payment_Requests.Designer.vb">
+      <DependentUpon>frm_Payment_Requests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Payment_Requests.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Bank_Account.Designer.vb">
+      <DependentUpon>frm_Bank_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Bank_Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Bank_Accounts.Designer.vb">
+      <DependentUpon>frm_Bank_Accounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Bank_Accounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Budget.Designer.vb">
+      <DependentUpon>frm_Budget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Budget.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Budgets.Designer.vb">
+      <DependentUpon>frm_Budgets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Budgets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Cashiering.Designer.vb">
+      <DependentUpon>frm_Cashiering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Cashiering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Chart_Of_Account.Designer.vb">
+      <DependentUpon>frm_Chart_Of_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Chart_Of_Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Chart_Of_Accounts.Designer.vb">
+      <DependentUpon>frm_Chart_Of_Accounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Chart_Of_Accounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Check_Number.Designer.vb">
+      <DependentUpon>frm_Check_Number.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Check_Number.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Check_Numbers.Designer.vb">
+      <DependentUpon>frm_Check_Numbers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Check_Numbers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_COA_Balances.Designer.vb">
+      <DependentUpon>frm_COA_Balances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_COA_Balances.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_COA_Ledger.Designer.vb">
+      <DependentUpon>frm_COA_Ledger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_COA_Ledger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Collection.Designer.vb">
+      <DependentUpon>frm_Collection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Collection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Collections.Designer.vb">
+      <DependentUpon>frm_Collections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Collections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Credit_Memo.Designer.vb">
+      <DependentUpon>frm_Credit_Memo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Credit_Memo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Entries.Designer.vb">
+      <DependentUpon>frm_Journal_Entries.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Entries.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Entries_Reference.Designer.vb">
+      <DependentUpon>frm_Journal_Entries_Reference.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Entries_Reference.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Entry.Designer.vb">
+      <DependentUpon>frm_Journal_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Profile.Designer.vb">
+      <DependentUpon>frm_Journal_Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Profiles.Designer.vb">
+      <DependentUpon>frm_Journal_Profiles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Journal_Profiles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\wzFrm_Cash_Check_Voucher.Designer.vb">
+      <DependentUpon>wzFrm_Cash_Check_Voucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\wzFrm_Cash_Check_Voucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Brands.Designer.vb">
+      <DependentUpon>frm_Brands.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Brands.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Transfers.Designer.vb">
+      <DependentUpon>frm_MC_Transfers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Transfers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Orders.Designer.vb">
+      <DependentUpon>frm_MC_Orders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Orders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Requests.Designer.vb">
+      <DependentUpon>frm_MC_Requests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Requests.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Inclusion_Inventory.Designer.vb">
+      <DependentUpon>frm_Inclusion_Inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Inclusion_Inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Inclusions.Designer.vb">
+      <DependentUpon>frm_Inclusions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Inclusions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Transactions.Designer.vb">
+      <DependentUpon>frm_MC_Transactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_MC_Transactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Purchase_Orders.Designer.vb">
+      <DependentUpon>frm_Purchase_Orders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Purchase_Orders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Unit_Invoices.Designer.vb">
+      <DependentUpon>frm_Unit_Invoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Unit_Invoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\wzFrm_MC_Request.Designer.vb">
+      <DependentUpon>wzFrm_MC_Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\wzFrm_MC_Request.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\wzFrm_MC_Transaction.Designer.vb">
+      <DependentUpon>wzFrm_MC_Transaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\wzFrm_MC_Transaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\wzFrm_Purchase_Order.Designer.vb">
+      <DependentUpon>wzFrm_Purchase_Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\wzFrm_Purchase_Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Petty_Cash\frm_Expense_Entry.designer.vb">
+      <DependentUpon>frm_Expense_Entry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Petty_Cash\frm_Expense_Entry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Petty_Cash\frm_Petty_Cash_Profiles.Designer.vb">
+      <DependentUpon>frm_Petty_Cash_Profiles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Petty_Cash\frm_Petty_Cash_Profiles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Petty_Cash\frm_Petty_Cash_Transactions.Designer.vb">
+      <DependentUpon>frm_Petty_Cash_Transactions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Petty_Cash\frm_Petty_Cash_Transactions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Releases.Designer.vb">
+      <DependentUpon>frm_Releases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Releases.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Reposssesed.Designer.vb">
+      <DependentUpon>frm_Reposssesed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Reposssesed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Trial_Balance.Designer.vb">
+      <DependentUpon>frm_Trial_Balance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Trial_Balance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Voucher.Designer.vb">
+      <DependentUpon>frm_Voucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Voucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Vouchers.Designer.vb">
+      <DependentUpon>frm_Vouchers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Accounting\frm_Vouchers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Custom\frm_Error_Reports.Designer.vb">
+      <DependentUpon>frm_Error_Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Custom\frm_Error_Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account.Designer.vb">
+      <DependentUpon>frm_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Accounts.Designer.vb">
+      <DependentUpon>frm_Accounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Accounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Accounts_Searched.Designer.vb">
+      <DependentUpon>frm_Accounts_Searched.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Accounts_Searched.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Applications.Designer.vb">
+      <DependentUpon>frm_Account_Applications.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Applications.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Ledger.Designer.vb">
+      <DependentUpon>frm_Account_Ledger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Ledger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Ledgers.Designer.vb">
+      <DependentUpon>frm_Account_Ledgers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Ledgers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Payment.Designer.vb">
+      <DependentUpon>frm_Account_Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Payments.Designer.vb">
+      <DependentUpon>frm_Account_Payments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Payments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Reconcilation.Designer.vb">
+      <DependentUpon>frm_Account_Reconcilation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Account_Reconcilation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Aging.Designer.vb">
+      <DependentUpon>frm_Aging.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Aging.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Amortization_Schedule.Designer.vb">
+      <DependentUpon>frm_Amortization_Schedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Amortization_Schedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Payments.Designer.vb">
+      <DependentUpon>frm_Payments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Account\frm_Payments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPA\frm_SPA_Sales.Designer.vb">
+      <DependentUpon>frm_SPA_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPA\frm_SPA_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\frm_Cashiering.Designer.vb">
+      <DependentUpon>frm_Cashiering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\frm_Cashiering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\frm_Payment_Collection.Designer.vb">
+      <DependentUpon>frm_Payment_Collection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\frm_Payment_Collection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Color.Designer.vb">
+      <DependentUpon>frm_Unit_Color.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Color.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Colors.Designer.vb">
+      <DependentUpon>frm_Unit_Colors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Colors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Model.Designer.vb">
+      <DependentUpon>frm_Unit_Model.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Model.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Models.Designer.vb">
+      <DependentUpon>frm_Unit_Models.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Information\Item\frm_Unit_Models.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Unit_Inventory.Designer.vb">
+      <DependentUpon>frm_Unit_Inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Logistics\frm_Unit_Inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Management\frm_Branches.Designer.vb">
+      <DependentUpon>frm_Branches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Management\frm_Branches.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Executive.Designer.vb">
+      <DependentUpon>frm_Account_Executive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Executive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Executives.Designer.vb">
+      <DependentUpon>frm_Account_Executives.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Executives.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Name.Designer.vb">
+      <DependentUpon>frm_Account_Name.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Name.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Names.Designer.vb">
+      <DependentUpon>frm_Account_Names.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Account_Names.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Agent.Designer.vb">
+      <DependentUpon>frm_Agent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Agent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Agents.Designer.vb">
+      <DependentUpon>frm_Agents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Agents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Customer.Designer.vb">
+      <DependentUpon>frm_Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Customers.Designer.vb">
+      <DependentUpon>frm_Customers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Customers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Users.Designer.vb">
+      <DependentUpon>frm_Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_User_Activities.Designer.vb">
+      <DependentUpon>frm_User_Activities.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Persons\frm_User_Activities.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\frm_Connection.Designer.vb">
+      <DependentUpon>frm_Connection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\frm_Connection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\frm_Login.Designer.vb">
+      <DependentUpon>frm_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\frm_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\frm_Password_Change.Designer.vb">
+      <DependentUpon>frm_Password_Change.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\frm_Password_Change.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SPA\frm_SPA_Sales_Accounting.Designer.vb">
+      <DependentUpon>frm_SPA_Sales_Accounting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SPA\frm_SPA_Sales_Accounting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\WzFrm_MC_Sale_New.Designer.vb">
+      <DependentUpon>WzFrm_MC_Sale_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\WzFrm_MC_Sale_New.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XtraForm1.Designer.vb">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XtraForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\acc_Account_Names.vb">
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\acc_Banks.vb">
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\acc_Chart_Of_Accounts.vb">
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\acc_Checks.vb">
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\acc_Journal_Profiles.vb">
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\acc_Pay_Extensions.vb">
+      <DependentUpon>Model_HR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Corporation.vb" />
+    <Compile Include="Models\MCTransaction.vb" />
+    <Compile Include="Models\Model_Accounting.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Accounting.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_Accounting.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Accounting.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_Accounting.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_HR.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_HR.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_HR.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_HR.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model_HR.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_HR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReleaseType.vb" />
+    <Compile Include="Models\view_Checks.vb">
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\view_Journal_Profiles.vb">
+      <DependentUpon>Model_Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\class_Saga_Database.vb" />
+    <Compile Include="Classes\class_Saga_Functions.vb" />
+    <Compile Include="Classes\class_Saga_Procedures.vb" />
+    <Compile Include="Classes\class_Saga_Variables.vb" />
+    <Compile Include="Models\Voucher.vb" />
+    <Compile Include="Models\Warehouse.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Financial_Performance.Designer.vb">
+      <DependentUpon>xrpt_Financial_Performance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Financial_Performance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Financial_Position.Designer.vb">
+      <DependentUpon>xrpt_Financial_Position.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Financial_Position.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Check.Designer.vb">
+      <DependentUpon>xrpt_Check.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Check.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Balance_Sheet.Designer.vb">
+      <DependentUpon>xrpt_Balance_Sheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Balance_Sheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Liquidation.Designer.vb">
+      <DependentUpon>xrpt_Liquidation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Liquidation.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_FS.Designer.vb">
+      <DependentUpon>xrpt_FS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_FS.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Payment_Request.Designer.vb">
+      <DependentUpon>xrpt_Payment_Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Payment_Request.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Proof_Sheet.Designer.vb">
+      <DependentUpon>xrpt_Proof_Sheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Proof_Sheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Trial_Balance.Designer.vb">
+      <DependentUpon>xrpt_Trial_Balance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Trial_Balance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Voucher.Designer.vb">
+      <DependentUpon>xrpt_Voucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Accounting\xrpt_Voucher.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Order_Received.Designer.vb">
+      <DependentUpon>xrpt_Purchase_Order_Received.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Order_Received.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Order_Summary.Designer.vb">
+      <DependentUpon>xrpt_Purchase_Order_Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Order_Summary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Order_Monitoring.Designer.vb">
+      <DependentUpon>xrpt_Purchase_Order_Monitoring.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Order_Monitoring.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Transfer_Units.Designer.vb">
+      <DependentUpon>xrpt_Transfer_Units.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Transfer_Units.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Unit_Costing.Designer.vb">
+      <DependentUpon>xrpt_Unit_Costing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Unit_Costing.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_MC_Requests.Designer.vb">
+      <DependentUpon>xrpt_MC_Requests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_MC_Requests.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Receive_Units.Designer.vb">
+      <DependentUpon>xrpt_Receive_Units.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Receive_Units.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Orders.Designer.vb">
+      <DependentUpon>xrpt_Purchase_Orders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Logistics\xrpt_Purchase_Orders.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Petty_Cash\xrpt_Expense_Summary.Designer.vb">
+      <DependentUpon>xrpt_Expense_Summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Petty_Cash\xrpt_Expense_Summary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Petty_Cash\xrpt_Expense_Request.Designer.vb">
+      <DependentUpon>xrpt_Expense_Request.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Petty_Cash\xrpt_Expense_Request.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Deed_Of_Sale.Designer.vb">
+      <DependentUpon>xrpt_Deed_Of_Sale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Deed_Of_Sale.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Deed_Of_Reconveyance.Designer.vb">
+      <DependentUpon>xrpt_Deed_Of_Reconveyance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Deed_Of_Reconveyance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Pull_Out.Designer.vb">
+      <DependentUpon>xrpt_Pull_Out.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Pull_Out.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Chattel_Mortgage.Designer.vb">
+      <DependentUpon>xrpt_Chattel_Mortgage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Chattel_Mortgage.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Disclosure_Statement.Designer.vb">
+      <DependentUpon>xrpt_Disclosure_Statement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Disclosure_Statement.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Waiver.Designer.vb">
+      <DependentUpon>xrpt_Waiver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Waiver.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Computation.Designer.vb">
+      <DependentUpon>xrpt_Computation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Computation.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Certification.Designer.vb">
+      <DependentUpon>xrpt_Certification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Certification.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Amortization_Schedule.Designer.vb">
+      <DependentUpon>xrpt_Amortization_Schedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Release\xrpt_Amortization_Schedule.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Transactions\xrpt_Cashiering_Receipt.Designer.vb">
+      <DependentUpon>xrpt_Cashiering_Receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Transactions\xrpt_Cashiering_Receipt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Transactions\xrpt_Collection_Receipt.Designer.vb">
+      <DependentUpon>xrpt_Collection_Receipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Transactions\xrpt_Collection_Receipt.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Wizards\wzf_Voucher.Designer.vb">
+      <DependentUpon>wzf_Voucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Wizards\wzf_Voucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Account_Summary.resx">
+      <DependentUpon>xuc_Account_Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Balance_Import.resx">
+      <DependentUpon>xuc_Balance_Import.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Bank.resx">
+      <DependentUpon>xuc_Bank.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Budget.resx">
+      <DependentUpon>xuc_Budget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Chart_Of_Account.resx">
+      <DependentUpon>xuc_Chart_Of_Account.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Check.resx">
+      <DependentUpon>xuc_Check.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Grid_Cashiering.resx">
+      <DependentUpon>xuc_Grid_Cashiering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Grid_Collection.resx">
+      <DependentUpon>xuc_Grid_Collection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Grid_Journal_References.resx">
+      <DependentUpon>xuc_Grid_Journal_References.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Journal_Entries.resx">
+      <DependentUpon>xuc_Journal_Entries.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Journal_Entry.resx">
+      <DependentUpon>xuc_Journal_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Journal_Profile.resx">
+      <DependentUpon>xuc_Journal_Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_MC_Promo.resx">
+      <DependentUpon>xuc_MC_Promo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Payment_Request.resx">
+      <DependentUpon>xuc_Payment_Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Trial_Balance_Tree.resx">
+      <DependentUpon>xuc_Trial_Balance_Tree.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Item\xuc_Brand.resx">
+      <DependentUpon>xuc_Brand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_Inclusion_Inventory.resx">
+      <DependentUpon>xuc_Inclusion_Inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_Inclusion.resx">
+      <DependentUpon>xuc_Inclusion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_Purchase_Order_Units.resx">
+      <DependentUpon>xuc_Purchase_Order_Units.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_MC_Transaction_Units.resx">
+      <DependentUpon>xuc_MC_Transaction_Units.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_MC_Request.resx">
+      <DependentUpon>xuc_MC_Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_Purchase_Order.resx">
+      <DependentUpon>xuc_Purchase_Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_MC_Transaction.resx">
+      <DependentUpon>xuc_MC_Transaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_Unit_Invoice.resx">
+      <DependentUpon>xuc_Unit_Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Petty_Cash\xuc_Expense.resx">
+      <DependentUpon>xuc_Expense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Petty_Cash\xuc_Petty_Cash_Profile.resx">
+      <DependentUpon>xuc_Petty_Cash_Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Accounting\xuc_Voucher.resx">
+      <DependentUpon>xuc_Voucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Account\xuc_Account.resx">
+      <DependentUpon>xuc_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Account\xuc_Accounts.resx">
+      <DependentUpon>xuc_Accounts.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Account\xuc_Account_Application.resx">
+      <DependentUpon>xuc_Account_Application.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Account\xuc_Account_Ledger.resx">
+      <DependentUpon>xuc_Account_Ledger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Account\xuc_Account_Payment.resx">
+      <DependentUpon>xuc_Account_Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Account\xuc_Account_Search.resx">
+      <DependentUpon>xuc_Account_Search.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Account\xuc_Grid_Ledger.resx">
+      <DependentUpon>xuc_Grid_Ledger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Item\xuc_Color.resx">
+      <DependentUpon>xuc_Color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information\Item\xuc_Model.resx">
+      <DependentUpon>xuc_Model.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_Transport.resx">
+      <DependentUpon>xuc_Transport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Logistics\xuc_Unit_Inventory.resx">
+      <DependentUpon>xuc_Unit_Inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Management\xuc_Branch.resx">
+      <DependentUpon>xuc_Branch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Persons\xuc_Account_Excutive.resx">
+      <DependentUpon>xuc_Account_Excutive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Persons\xuc_Account_Name.resx">
+      <DependentUpon>xuc_Account_Name.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Persons\xuc_Agent.resx">
+      <DependentUpon>xuc_Agent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Persons\xuc_Customer.resx">
+      <DependentUpon>xuc_Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Persons\xuc_Printing_Detail.resx">
+      <DependentUpon>xuc_Printing_Detail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Persons\xuc_User.resx">
+      <DependentUpon>xuc_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Custom\xuc_Error_Report.resx">
+      <DependentUpon>xuc_Error_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Payment_Request.resx">
+      <DependentUpon>frm_Payment_Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_MC_Promotions.resx">
+      <DependentUpon>frm_MC_Promotions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Payment_Requests.resx">
+      <DependentUpon>frm_Payment_Requests.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Bank_Account.resx">
+      <DependentUpon>frm_Bank_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Bank_Accounts.resx">
+      <DependentUpon>frm_Bank_Accounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Budget.resx">
+      <DependentUpon>frm_Budget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Budgets.resx">
+      <DependentUpon>frm_Budgets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Cashiering.resx">
+      <DependentUpon>frm_Cashiering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Chart_Of_Account.resx">
+      <DependentUpon>frm_Chart_Of_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Chart_Of_Accounts.resx">
+      <DependentUpon>frm_Chart_Of_Accounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Check_Number.resx">
+      <DependentUpon>frm_Check_Number.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Check_Numbers.resx">
+      <DependentUpon>frm_Check_Numbers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_COA_Balances.resx">
+      <DependentUpon>frm_COA_Balances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_COA_Ledger.resx">
+      <DependentUpon>frm_COA_Ledger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Collection.resx">
+      <DependentUpon>frm_Collection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Collections.resx">
+      <DependentUpon>frm_Collections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Credit_Memo.resx">
+      <DependentUpon>frm_Credit_Memo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Journal_Entries.resx">
+      <DependentUpon>frm_Journal_Entries.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Journal_Entries_Reference.resx">
+      <DependentUpon>frm_Journal_Entries_Reference.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Journal_Entry.resx">
+      <DependentUpon>frm_Journal_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Journal_Profile.resx">
+      <DependentUpon>frm_Journal_Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Journal_Profiles.resx">
+      <DependentUpon>frm_Journal_Profiles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\wzFrm_Cash_Check_Voucher.resx">
+      <DependentUpon>wzFrm_Cash_Check_Voucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Item\frm_Brands.resx">
+      <DependentUpon>frm_Brands.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_MC_Transfers.resx">
+      <DependentUpon>frm_MC_Transfers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_MC_Orders.resx">
+      <DependentUpon>frm_MC_Orders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_MC_Requests.resx">
+      <DependentUpon>frm_MC_Requests.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_Inclusion_Inventory.resx">
+      <DependentUpon>frm_Inclusion_Inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_Inclusions.resx">
+      <DependentUpon>frm_Inclusions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_MC_Transactions.resx">
+      <DependentUpon>frm_MC_Transactions.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_Purchase_Orders.resx">
+      <DependentUpon>frm_Purchase_Orders.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_Unit_Invoices.resx">
+      <DependentUpon>frm_Unit_Invoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\wzFrm_MC_Request.resx">
+      <DependentUpon>wzFrm_MC_Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\wzFrm_MC_Transaction.resx">
+      <DependentUpon>wzFrm_MC_Transaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\wzFrm_Purchase_Order.resx">
+      <DependentUpon>wzFrm_Purchase_Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Petty_Cash\frm_Expense_Entry.resx">
+      <DependentUpon>frm_Expense_Entry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Petty_Cash\frm_Petty_Cash_Profiles.resx">
+      <DependentUpon>frm_Petty_Cash_Profiles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Petty_Cash\frm_Petty_Cash_Transactions.resx">
+      <DependentUpon>frm_Petty_Cash_Transactions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Releases.resx">
+      <DependentUpon>frm_Releases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Reposssesed.resx">
+      <DependentUpon>frm_Reposssesed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Trial_Balance.resx">
+      <DependentUpon>frm_Trial_Balance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Voucher.resx">
+      <DependentUpon>frm_Voucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Accounting\frm_Vouchers.resx">
+      <DependentUpon>frm_Vouchers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Custom\frm_Error_Reports.resx">
+      <DependentUpon>frm_Error_Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Account.resx">
+      <DependentUpon>frm_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Accounts.resx">
+      <DependentUpon>frm_Accounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Accounts_Searched.resx">
+      <DependentUpon>frm_Accounts_Searched.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Account_Applications.resx">
+      <DependentUpon>frm_Account_Applications.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Account_Ledger.resx">
+      <DependentUpon>frm_Account_Ledger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Account_Ledgers.resx">
+      <DependentUpon>frm_Account_Ledgers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Account_Payment.resx">
+      <DependentUpon>frm_Account_Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Account_Payments.resx">
+      <DependentUpon>frm_Account_Payments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Account_Reconcilation.resx">
+      <DependentUpon>frm_Account_Reconcilation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Aging.resx">
+      <DependentUpon>frm_Aging.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Amortization_Schedule.resx">
+      <DependentUpon>frm_Amortization_Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Account\frm_Payments.resx">
+      <DependentUpon>frm_Payments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPA\frm_SPA_Sales.resx">
+      <DependentUpon>frm_SPA_Sales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\frm_Cashiering.resx">
+      <DependentUpon>frm_Cashiering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\frm_Payment_Collection.resx">
+      <DependentUpon>frm_Payment_Collection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Item\frm_Unit_Color.resx">
+      <DependentUpon>frm_Unit_Color.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Item\frm_Unit_Colors.resx">
+      <DependentUpon>frm_Unit_Colors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Item\frm_Unit_Model.resx">
+      <DependentUpon>frm_Unit_Model.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Information\Item\frm_Unit_Models.resx">
+      <DependentUpon>frm_Unit_Models.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Logistics\frm_Unit_Inventory.resx">
+      <DependentUpon>frm_Unit_Inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Management\frm_Branches.resx">
+      <DependentUpon>frm_Branches.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Account_Executive.resx">
+      <DependentUpon>frm_Account_Executive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Account_Executives.resx">
+      <DependentUpon>frm_Account_Executives.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Account_Name.resx">
+      <DependentUpon>frm_Account_Name.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Account_Names.resx">
+      <DependentUpon>frm_Account_Names.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Agent.resx">
+      <DependentUpon>frm_Agent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Agents.resx">
+      <DependentUpon>frm_Agents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Customer.resx">
+      <DependentUpon>frm_Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Customers.resx">
+      <DependentUpon>frm_Customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_Users.resx">
+      <DependentUpon>frm_Users.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Persons\frm_User_Activities.resx">
+      <DependentUpon>frm_User_Activities.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\frm_Connection.resx">
+      <DependentUpon>frm_Connection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\frm_Login.resx">
+      <DependentUpon>frm_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\frm_Password_Change.resx">
+      <DependentUpon>frm_Password_Change.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SPA\frm_SPA_Sales_Accounting.resx">
+      <DependentUpon>frm_SPA_Sales_Accounting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\WzFrm_MC_Sale_New.resx">
+      <DependentUpon>WzFrm_MC_Sale_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XtraForm1.resx">
+      <DependentUpon>XtraForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Financial_Performance.resx">
+      <DependentUpon>xrpt_Financial_Performance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Financial_Position.resx">
+      <DependentUpon>xrpt_Financial_Position.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Check.resx">
+      <DependentUpon>xrpt_Check.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Balance_Sheet.resx">
+      <DependentUpon>xrpt_Balance_Sheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Liquidation.resx">
+      <DependentUpon>xrpt_Liquidation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_FS.resx">
+      <DependentUpon>xrpt_FS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Payment_Request.resx">
+      <DependentUpon>xrpt_Payment_Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Proof_Sheet.resx">
+      <DependentUpon>xrpt_Proof_Sheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Trial_Balance.resx">
+      <DependentUpon>xrpt_Trial_Balance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Accounting\xrpt_Voucher.resx">
+      <DependentUpon>xrpt_Voucher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_Purchase_Order_Received.resx">
+      <DependentUpon>xrpt_Purchase_Order_Received.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_Purchase_Order_Summary.resx">
+      <DependentUpon>xrpt_Purchase_Order_Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_Purchase_Order_Monitoring.resx">
+      <DependentUpon>xrpt_Purchase_Order_Monitoring.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_Transfer_Units.resx">
+      <DependentUpon>xrpt_Transfer_Units.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_Unit_Costing.resx">
+      <DependentUpon>xrpt_Unit_Costing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_MC_Requests.resx">
+      <DependentUpon>xrpt_MC_Requests.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_Receive_Units.resx">
+      <DependentUpon>xrpt_Receive_Units.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Logistics\xrpt_Purchase_Orders.resx">
+      <DependentUpon>xrpt_Purchase_Orders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Petty_Cash\xrpt_Expense_Summary.resx">
+      <DependentUpon>xrpt_Expense_Summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Petty_Cash\xrpt_Expense_Request.resx">
+      <DependentUpon>xrpt_Expense_Request.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Deed_Of_Sale.resx">
+      <DependentUpon>xrpt_Deed_Of_Sale.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Deed_Of_Reconveyance.resx">
+      <DependentUpon>xrpt_Deed_Of_Reconveyance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Pull_Out.resx">
+      <DependentUpon>xrpt_Pull_Out.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Chattel_Mortgage.resx">
+      <DependentUpon>xrpt_Chattel_Mortgage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Disclosure_Statement.resx">
+      <DependentUpon>xrpt_Disclosure_Statement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Waiver.resx">
+      <DependentUpon>xrpt_Waiver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Computation.resx">
+      <DependentUpon>xrpt_Computation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Certification.resx">
+      <DependentUpon>xrpt_Certification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Release\xrpt_Amortization_Schedule.resx">
+      <DependentUpon>xrpt_Amortization_Schedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Transactions\xrpt_Cashiering_Receipt.resx">
+      <DependentUpon>xrpt_Cashiering_Receipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Transactions\xrpt_Collection_Receipt.resx">
+      <DependentUpon>xrpt_Collection_Receipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wizards\wzf_Voucher.resx">
+      <DependentUpon>wzf_Voucher.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Models\Model_Accounting.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_Accounting.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Model_Accounting.edmx.diagram">
+      <DependentUpon>Model_Accounting.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Models\Model_HR.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_HR.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Model_HR.edmx.diagram">
+      <DependentUpon>Model_HR.edmx</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Graphs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\Model_Accounting.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_Accounting.edmx</DependentUpon>
+      <LastGenOutput>Model_Accounting.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model_Accounting.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_Accounting.edmx</DependentUpon>
+      <LastGenOutput>Model_Accounting.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model_HR.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_HR.edmx</DependentUpon>
+      <LastGenOutput>Model_HR.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model_HR.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_HR.edmx</DependentUpon>
+      <LastGenOutput>Model_HR.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyClassLibrary\MyClassLibrary.csproj">
+      <Project>{710fbcc8-3d66-04c1-0e0d-77edfb72de3a}</Project>
+      <Name>MyClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

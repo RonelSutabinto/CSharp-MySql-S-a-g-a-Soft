@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7c33e8c6772743aba9fa0eba88d2c4bb" Name="Diagram1">
+        <EntityTypeShape EntityType="ICSModel.acc_Banks" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ICSModel.acc_Checks" Width="1.875" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ICSModel.acc_Journal_Profiles" Width="1.875" PointX="5.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ICSModel.acc_Chart_Of_Accounts" Width="1.625" PointX="7.5" PointY="0.75" />
+        <EntityTypeShape EntityType="ICSModel.acc_Account_Names" Width="1.875" PointX="9.625" PointY="0.75" />
+        <EntityTypeShape EntityType="ICSModel.view_Checks" Width="1.875" PointX="11.875" PointY="0.75" />
+        <EntityTypeShape EntityType="ICSModel.view_Journal_Profiles" Width="1.75" PointX="14.25" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

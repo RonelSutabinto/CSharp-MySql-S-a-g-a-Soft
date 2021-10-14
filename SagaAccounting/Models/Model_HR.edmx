@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ICSHRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="acc_Employees">
+          <Key>
+            <PropertyRef Name="Employee_Code" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Employee_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Employee_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="Employee_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee_Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Employee_Contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Date_Birth" Type="date" />
+          <Property Name="Employee_Age" Type="int" />
+          <Property Name="Employee_Birth_Place" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Civil_Status" Type="nvarchar" MaxLength="10" />
+          <Property Name="Employee_Corporation" Type="nvarchar" MaxLength="12" />
+          <Property Name="Employee_Branch" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="Employee_Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Pay_Level" Type="nvarchar" MaxLength="10" />
+          <Property Name="Employee_Pay_Class" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_Date_Hired" Type="date" />
+          <Property Name="Employee_Date_Probationary" Type="date" />
+          <Property Name="Employee_Date_Regular" Type="date" />
+          <Property Name="Employee_Service_Length" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_TIN" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_SSS" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_PHIC" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_PAG_IBIG" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_Attainment" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_Course" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Name_Spouse" Type="nvarchar" MaxLength="50" />
+          <Property Name="Employee_Children" Type="varchar(max)" />
+          <Property Name="Employee_Driver_License" Type="nvarchar" MaxLength="10" />
+          <Property Name="Employee_Driver_License_Expiry" Type="date" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="datetime" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="acc_Pay_Extensions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pay_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Pay_Type" Type="nvarchar" MaxLength="20" />
+          <Property Name="Pay_Title" Type="nvarchar" MaxLength="20" />
+          <Property Name="Pay_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pay_Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="date" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="date" />
+        </EntityType>
+        <EntityContainer Name="ICSHRModelStoreContainer">
+          <EntitySet Name="acc_Employees" EntityType="Self.acc_Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="acc_Pay_Extensions" EntityType="Self.acc_Pay_Extensions" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ICSHRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="acc_Employees">
+          <Key>
+            <PropertyRef Name="Employee_Code" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Employee_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_ID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Date_Birth" Type="DateTime" Precision="0" />
+          <Property Name="Employee_Age" Type="Int32" />
+          <Property Name="Employee_Birth_Place" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Civil_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Corporation" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Branch" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Pay_Level" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Pay_Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Date_Hired" Type="DateTime" Precision="0" />
+          <Property Name="Employee_Date_Probationary" Type="DateTime" Precision="0" />
+          <Property Name="Employee_Date_Regular" Type="DateTime" Precision="0" />
+          <Property Name="Employee_Service_Length" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_TIN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_SSS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_PHIC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_PAG_IBIG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Attainment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Course" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Name_Spouse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Children" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Employee_Driver_License" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_Driver_License_Expiry" Type="DateTime" Precision="0" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="acc_Pay_Extensions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pay_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pay_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Pay_Title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Pay_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pay_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Precision="0" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="HREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="acc_Employees" EntityType="Self.acc_Employees" />
+          <EntitySet Name="acc_Pay_Extensions" EntityType="Self.acc_Pay_Extensions" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ICSHRModelStoreContainer" CdmEntityContainer="HREntities">
+          <EntitySetMapping Name="acc_Employees">
+            <EntityTypeMapping TypeName="ICSHRModel.acc_Employees">
+              <MappingFragment StoreEntitySet="acc_Employees">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Employee_Code" ColumnName="Employee_Code" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+                <ScalarProperty Name="Employee_Address" ColumnName="Employee_Address" />
+                <ScalarProperty Name="Employee_Contact" ColumnName="Employee_Contact" />
+                <ScalarProperty Name="Employee_Date_Birth" ColumnName="Employee_Date_Birth" />
+                <ScalarProperty Name="Employee_Age" ColumnName="Employee_Age" />
+                <ScalarProperty Name="Employee_Birth_Place" ColumnName="Employee_Birth_Place" />
+                <ScalarProperty Name="Employee_Civil_Status" ColumnName="Employee_Civil_Status" />
+                <ScalarProperty Name="Employee_Corporation" ColumnName="Employee_Corporation" />
+                <ScalarProperty Name="Employee_Branch" ColumnName="Employee_Branch" />
+                <ScalarProperty Name="Employee_Department" ColumnName="Employee_Department" />
+                <ScalarProperty Name="Employee_Position" ColumnName="Employee_Position" />
+                <ScalarProperty Name="Employee_Pay_Level" ColumnName="Employee_Pay_Level" />
+                <ScalarProperty Name="Employee_Pay_Class" ColumnName="Employee_Pay_Class" />
+                <ScalarProperty Name="Employee_Status" ColumnName="Employee_Status" />
+                <ScalarProperty Name="Employee_Date_Hired" ColumnName="Employee_Date_Hired" />
+                <ScalarProperty Name="Employee_Date_Probationary" ColumnName="Employee_Date_Probationary" />
+                <ScalarProperty Name="Employee_Date_Regular" ColumnName="Employee_Date_Regular" />
+                <ScalarProperty Name="Employee_Service_Length" ColumnName="Employee_Service_Length" />
+                <ScalarProperty Name="Employee_TIN" ColumnName="Employee_TIN" />
+                <ScalarProperty Name="Employee_SSS" ColumnName="Employee_SSS" />
+                <ScalarProperty Name="Employee_PHIC" ColumnName="Employee_PHIC" />
+                <ScalarProperty Name="Employee_PAG_IBIG" ColumnName="Employee_PAG_IBIG" />
+                <ScalarProperty Name="Employee_Attainment" ColumnName="Employee_Attainment" />
+                <ScalarProperty Name="Employee_Course" ColumnName="Employee_Course" />
+                <ScalarProperty Name="Employee_Name_Spouse" ColumnName="Employee_Name_Spouse" />
+                <ScalarProperty Name="Employee_Children" ColumnName="Employee_Children" />
+                <ScalarProperty Name="Employee_Driver_License" ColumnName="Employee_Driver_License" />
+                <ScalarProperty Name="Employee_Driver_License_Expiry" ColumnName="Employee_Driver_License_Expiry" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="acc_Pay_Extensions">
+            <EntityTypeMapping TypeName="ICSHRModel.acc_Pay_Extensions">
+              <MappingFragment StoreEntitySet="acc_Pay_Extensions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Pay_Code" ColumnName="Pay_Code" />
+                <ScalarProperty Name="Pay_Type" ColumnName="Pay_Type" />
+                <ScalarProperty Name="Pay_Title" ColumnName="Pay_Title" />
+                <ScalarProperty Name="Pay_Name" ColumnName="Pay_Name" />
+                <ScalarProperty Name="Pay_Description" ColumnName="Pay_Description" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

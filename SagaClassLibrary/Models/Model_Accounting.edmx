@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ICSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="acc_Account_Names">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Account_Code" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Account_Type" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Account_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Account_Address" Type="varchar" MaxLength="150" />
+          <Property Name="Account_Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Account_Description" Type="varchar" MaxLength="150" />
+          <Property Name="Notes" Type="varchar(max)" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="datetime" Nullable="false" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="acc_Banks">
+          <Key>
+            <PropertyRef Name="Bank_Code" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Bank_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Bank_Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Account_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank_BRSTN" Type="nvarchar" MaxLength="10" />
+          <Property Name="Bank_Manager" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank_Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Bank_Tel_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank_Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="datetime" Nullable="false" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="Corporation" Type="varchar" MaxLength="5" />
+          <Property Name="COA_Code" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="acc_Chart_Of_Accounts">
+          <Key>
+            <PropertyRef Name="COA_Code" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COA_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="COA_Statement" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="COA_Level" Type="int" Nullable="false" />
+          <Property Name="COA_Type" Type="nvarchar" MaxLength="10" />
+          <Property Name="COA_Summary" Type="nvarchar" MaxLength="10" />
+          <Property Name="COA_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="COA_Desc" Type="nvarchar" MaxLength="150" />
+          <Property Name="COA_Normal" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="date" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="date" />
+          <Property Name="Corporation" Type="varchar" MaxLength="4" />
+          <Property Name="IsLocked" Type="bit" />
+          <Property Name="Locked_By" Type="varchar" MaxLength="20" />
+          <Property Name="Locked_Date" Type="datetime" />
+          <Property Name="IsFS" Type="bit" />
+          <Property Name="IsLedger" Type="bit" />
+          <Property Name="Balance" Type="money" />
+          <Property Name="Balance_Date" Type="date" />
+          <Property Name="Balance_Limit" Type="money" />
+          <Property Name="Balance_Running" Type="money" />
+        </EntityType>
+        <EntityType Name="acc_Checks">
+          <Key>
+            <PropertyRef Name="Check_Code" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Check_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Check_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank_Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Check_Payee" Type="nvarchar" MaxLength="100" />
+          <Property Name="Check_Amount" Type="money" />
+          <Property Name="Check_Amount_Words" Type="nvarchar(max)" />
+          <Property Name="Issued_Date" Type="date" />
+          <Property Name="IsCancelled" Type="bit" />
+          <Property Name="Check_Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="datetime" Nullable="false" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="IsIssued" Type="bit" />
+          <Property Name="Reference" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsLocked" Type="bit" />
+          <Property Name="Locked_By" Type="varchar" MaxLength="20" />
+          <Property Name="Locked_Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="acc_Journal_Profiles">
+          <Key>
+            <PropertyRef Name="Profile_Code" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Profile_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Payment_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="Journal_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Profile_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="COA_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Profile_Description" Type="nvarchar" MaxLength="150" />
+          <Property Name="Profile_VAT" Type="bit" />
+          <Property Name="Balance_Type" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="date" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="date" />
+          <Property Name="Profile_Corporation" Type="nvarchar" MaxLength="10" />
+          <Property Name="Custom_COA" Type="bit" />
+          <Property Name="Profile_Type" Type="varchar" MaxLength="12" />
+          <Property Name="Friendly_Name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ICS.dbo.view_Checks' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="view_Checks">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Check_Code" />
+            <PropertyRef Name="Bank_Account" />
+            <PropertyRef Name="Added_Date" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Check_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Corporation" Type="varchar" MaxLength="5" />
+          <Property Name="Check_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank_Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Bank_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Account_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Check_Payee" Type="nvarchar" MaxLength="100" />
+          <Property Name="Check_Amount" Type="money" />
+          <Property Name="Check_Amount_Words" Type="nvarchar(max)" />
+          <Property Name="Issued_Date" Type="date" />
+          <Property Name="IsCancelled" Type="bit" />
+          <Property Name="Check_Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="datetime" Nullable="false" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="datetime" />
+          <Property Name="IsIssued" Type="bit" />
+          <Property Name="Reference" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsLocked" Type="bit" />
+          <Property Name="Locked_By" Type="varchar" MaxLength="20" />
+          <Property Name="Locked_Date" Type="datetime" />
+          <Property Name="Voucher_Code" Type="varchar" MaxLength="12" />
+          <Property Name="COA_Code" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ICS.dbo.view_Journal_Profiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="view_Journal_Profiles">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Balance_Type" />
+            <PropertyRef Name="Profile_Code" />
+            <PropertyRef Name="COA_Code" />
+            <PropertyRef Name="COA_Name" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Journal_Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Profile_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Profile_Description" Type="nvarchar" MaxLength="150" />
+          <Property Name="Balance_Type" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Notes" Type="text" />
+          <Property Name="Added_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Added_Date" Type="date" />
+          <Property Name="Modified_By" Type="nvarchar" MaxLength="20" />
+          <Property Name="Modified_Date" Type="date" />
+          <Property Name="Profile_Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Payment_Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="Profile_VAT" Type="bit" />
+          <Property Name="Profile_Corporation" Type="nvarchar" MaxLength="10" />
+          <Property Name="Custom_COA" Type="bit" />
+          <Property Name="Profile_Type" Type="varchar" MaxLength="12" />
+          <Property Name="Friendly_Name" Type="varchar" MaxLength="100" />
+          <Property Name="COA_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="COA_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ICSModelStoreContainer">
+          <EntitySet Name="acc_Account_Names" EntityType="Self.acc_Account_Names" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="acc_Banks" EntityType="Self.acc_Banks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="acc_Chart_Of_Accounts" EntityType="Self.acc_Chart_Of_Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="acc_Checks" EntityType="Self.acc_Checks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="acc_Journal_Profiles" EntityType="Self.acc_Journal_Profiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="view_Checks" EntityType="Self.view_Checks" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [view_Checks].[ID] AS [ID], 
+    [view_Checks].[Check_Code] AS [Check_Code], 
+    [view_Checks].[Corporation] AS [Corporation], 
+    [view_Checks].[Check_Number] AS [Check_Number], 
+    [view_Checks].[Bank_Account] AS [Bank_Account], 
+    [view_Checks].[Bank_Name] AS [Bank_Name], 
+    [view_Checks].[Account_Name] AS [Account_Name], 
+    [view_Checks].[Check_Payee] AS [Check_Payee], 
+    [view_Checks].[Check_Amount] AS [Check_Amount], 
+    [view_Checks].[Check_Amount_Words] AS [Check_Amount_Words], 
+    [view_Checks].[Issued_Date] AS [Issued_Date], 
+    [view_Checks].[IsCancelled] AS [IsCancelled], 
+    [view_Checks].[Check_Description] AS [Check_Description], 
+    [view_Checks].[Notes] AS [Notes], 
+    [view_Checks].[Added_By] AS [Added_By], 
+    [view_Checks].[Added_Date] AS [Added_Date], 
+    [view_Checks].[Modified_By] AS [Modified_By], 
+    [view_Checks].[Modified_Date] AS [Modified_Date], 
+    [view_Checks].[IsIssued] AS [IsIssued], 
+    [view_Checks].[Reference] AS [Reference], 
+    [view_Checks].[IsLocked] AS [IsLocked], 
+    [view_Checks].[Locked_By] AS [Locked_By], 
+    [view_Checks].[Locked_Date] AS [Locked_Date], 
+    [view_Checks].[Voucher_Code] AS [Voucher_Code], 
+    [view_Checks].[COA_Code] AS [COA_Code]
+    FROM [dbo].[view_Checks] AS [view_Checks]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="view_Journal_Profiles" EntityType="Self.view_Journal_Profiles" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [view_Journal_Profiles].[ID] AS [ID], 
+    [view_Journal_Profiles].[Journal_Type] AS [Journal_Type], 
+    [view_Journal_Profiles].[Profile_Name] AS [Profile_Name], 
+    [view_Journal_Profiles].[Profile_Description] AS [Profile_Description], 
+    [view_Journal_Profiles].[Balance_Type] AS [Balance_Type], 
+    [view_Journal_Profiles].[Notes] AS [Notes], 
+    [view_Journal_Profiles].[Added_By] AS [Added_By], 
+    [view_Journal_Profiles].[Added_Date] AS [Added_Date], 
+    [view_Journal_Profiles].[Modified_By] AS [Modified_By], 
+    [view_Journal_Profiles].[Modified_Date] AS [Modified_Date], 
+    [view_Journal_Profiles].[Profile_Code] AS [Profile_Code], 
+    [view_Journal_Profiles].[Payment_Code] AS [Payment_Code], 
+    [view_Journal_Profiles].[Profile_VAT] AS [Profile_VAT], 
+    [view_Journal_Profiles].[Profile_Corporation] AS [Profile_Corporation], 
+    [view_Journal_Profiles].[Custom_COA] AS [Custom_COA], 
+    [view_Journal_Profiles].[Profile_Type] AS [Profile_Type], 
+    [view_Journal_Profiles].[Friendly_Name] AS [Friendly_Name], 
+    [view_Journal_Profiles].[COA_Code] AS [COA_Code], 
+    [view_Journal_Profiles].[COA_Name] AS [COA_Name]
+    FROM [dbo].[view_Journal_Profiles] AS [view_Journal_Profiles]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ICSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="acc_Banks">
+          <Key>
+            <PropertyRef Name="Bank_Code" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bank_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Bank_Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Account_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_BRSTN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Tel_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+          <Property Name="Corporation" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="COA_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="acc_Checks">
+          <Key>
+            <PropertyRef Name="Check_Code" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Check_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Check_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Check_Payee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Check_Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Check_Amount_Words" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Issued_Date" Type="DateTime" Precision="0" />
+          <Property Name="IsCancelled" Type="Boolean" />
+          <Property Name="Check_Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+          <Property Name="IsIssued" Type="Boolean" />
+          <Property Name="Reference" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsLocked" Type="Boolean" />
+          <Property Name="Locked_By" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Locked_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="acc_Journal_Profiles">
+          <Key>
+            <PropertyRef Name="Profile_Code" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Profile_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Payment_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Journal_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Profile_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Profile_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Profile_VAT" Type="Boolean" />
+          <Property Name="Balance_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Precision="0" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="0" />
+          <Property Name="Profile_Corporation" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Custom_COA" Type="Boolean" />
+          <Property Name="Profile_Type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Friendly_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="acc_Banks" EntityType="Self.acc_Banks" />
+          <EntitySet Name="acc_Checks" EntityType="Self.acc_Checks" />
+          <EntitySet Name="acc_Journal_Profiles" EntityType="Self.acc_Journal_Profiles" />
+          <EntitySet Name="acc_Chart_Of_Accounts" EntityType="ICSModel.acc_Chart_Of_Accounts" />
+          <EntitySet Name="acc_Account_Names" EntityType="ICSModel.acc_Account_Names" />
+          <EntitySet Name="view_Checks" EntityType="ICSModel.view_Checks" />
+          <EntitySet Name="view_Journal_Profiles" EntityType="ICSModel.view_Journal_Profiles" />
+        </EntityContainer>
+        <EntityType Name="acc_Chart_Of_Accounts">
+          <Key>
+            <PropertyRef Name="COA_Code" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COA_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Statement" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Level" Type="Int32" Nullable="false" />
+          <Property Name="COA_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Summary" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Normal" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Precision="0" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="0" />
+          <Property Name="Corporation" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="IsLocked" Type="Boolean" />
+          <Property Name="Locked_By" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Locked_Date" Type="DateTime" Precision="3" />
+          <Property Name="IsFS" Type="Boolean" />
+          <Property Name="IsLedger" Type="Boolean" />
+          <Property Name="Balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Balance_Date" Type="DateTime" Precision="0" />
+          <Property Name="Balance_Limit" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Balance_Running" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="acc_Account_Names">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Account_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Account_Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Account_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Account_Address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Account_Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Account_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="view_Checks">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Check_Code" />
+            <PropertyRef Name="Bank_Account" />
+            <PropertyRef Name="Added_Date" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Check_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Corporation" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Check_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Account" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Account_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Check_Payee" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Check_Amount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Check_Amount_Words" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Issued_Date" Type="DateTime" Precision="0" />
+          <Property Name="IsCancelled" Type="Boolean" />
+          <Property Name="Check_Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="3" />
+          <Property Name="IsIssued" Type="Boolean" />
+          <Property Name="Reference" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsLocked" Type="Boolean" />
+          <Property Name="Locked_By" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Locked_Date" Type="DateTime" Precision="3" />
+          <Property Name="Voucher_Code" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="COA_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="view_Journal_Profiles">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Balance_Type" />
+            <PropertyRef Name="Profile_Code" />
+            <PropertyRef Name="COA_Code" />
+            <PropertyRef Name="COA_Name" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Journal_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Profile_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Profile_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Balance_Type" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Added_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Added_Date" Type="DateTime" Precision="0" />
+          <Property Name="Modified_By" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Modified_Date" Type="DateTime" Precision="0" />
+          <Property Name="Profile_Code" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Payment_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Profile_VAT" Type="Boolean" />
+          <Property Name="Profile_Corporation" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Custom_COA" Type="Boolean" />
+          <Property Name="Profile_Type" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Friendly_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="COA_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="COA_Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ICSModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="acc_Banks">
+            <EntityTypeMapping TypeName="ICSModel.acc_Banks">
+              <MappingFragment StoreEntitySet="acc_Banks">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Bank_Code" ColumnName="Bank_Code" />
+                <ScalarProperty Name="Bank_Account" ColumnName="Bank_Account" />
+                <ScalarProperty Name="Account_Name" ColumnName="Account_Name" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+                <ScalarProperty Name="Bank_BRSTN" ColumnName="Bank_BRSTN" />
+                <ScalarProperty Name="Bank_Manager" ColumnName="Bank_Manager" />
+                <ScalarProperty Name="Bank_Address" ColumnName="Bank_Address" />
+                <ScalarProperty Name="Bank_Tel_Number" ColumnName="Bank_Tel_Number" />
+                <ScalarProperty Name="Bank_Description" ColumnName="Bank_Description" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Corporation" ColumnName="Corporation" />
+                <ScalarProperty Name="COA_Code" ColumnName="COA_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="acc_Checks">
+            <EntityTypeMapping TypeName="ICSModel.acc_Checks">
+              <MappingFragment StoreEntitySet="acc_Checks">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Check_Code" ColumnName="Check_Code" />
+                <ScalarProperty Name="Check_Number" ColumnName="Check_Number" />
+                <ScalarProperty Name="Bank_Account" ColumnName="Bank_Account" />
+                <ScalarProperty Name="Check_Payee" ColumnName="Check_Payee" />
+                <ScalarProperty Name="Check_Amount" ColumnName="Check_Amount" />
+                <ScalarProperty Name="Check_Amount_Words" ColumnName="Check_Amount_Words" />
+                <ScalarProperty Name="Issued_Date" ColumnName="Issued_Date" />
+                <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
+                <ScalarProperty Name="Check_Description" ColumnName="Check_Description" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+                <ScalarProperty Name="Locked_By" ColumnName="Locked_By" />
+                <ScalarProperty Name="Locked_Date" ColumnName="Locked_Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="acc_Journal_Profiles">
+            <EntityTypeMapping TypeName="ICSModel.acc_Journal_Profiles">
+              <MappingFragment StoreEntitySet="acc_Journal_Profiles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Profile_Code" ColumnName="Profile_Code" />
+                <ScalarProperty Name="Payment_Code" ColumnName="Payment_Code" />
+                <ScalarProperty Name="Journal_Type" ColumnName="Journal_Type" />
+                <ScalarProperty Name="Profile_Name" ColumnName="Profile_Name" />
+                <ScalarProperty Name="COA_Code" ColumnName="COA_Code" />
+                <ScalarProperty Name="Profile_Description" ColumnName="Profile_Description" />
+                <ScalarProperty Name="Profile_VAT" ColumnName="Profile_VAT" />
+                <ScalarProperty Name="Balance_Type" ColumnName="Balance_Type" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Profile_Corporation" ColumnName="Profile_Corporation" />
+                <ScalarProperty Name="Custom_COA" ColumnName="Custom_COA" />
+                <ScalarProperty Name="Profile_Type" ColumnName="Profile_Type" />
+                <ScalarProperty Name="Friendly_Name" ColumnName="Friendly_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="acc_Chart_Of_Accounts">
+            <EntityTypeMapping TypeName="ICSModel.acc_Chart_Of_Accounts">
+              <MappingFragment StoreEntitySet="acc_Chart_Of_Accounts">
+                <ScalarProperty Name="Balance_Running" ColumnName="Balance_Running" />
+                <ScalarProperty Name="Balance_Limit" ColumnName="Balance_Limit" />
+                <ScalarProperty Name="Balance_Date" ColumnName="Balance_Date" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="IsLedger" ColumnName="IsLedger" />
+                <ScalarProperty Name="IsFS" ColumnName="IsFS" />
+                <ScalarProperty Name="Locked_Date" ColumnName="Locked_Date" />
+                <ScalarProperty Name="Locked_By" ColumnName="Locked_By" />
+                <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+                <ScalarProperty Name="Corporation" ColumnName="Corporation" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="COA_Normal" ColumnName="COA_Normal" />
+                <ScalarProperty Name="COA_Desc" ColumnName="COA_Desc" />
+                <ScalarProperty Name="COA_Name" ColumnName="COA_Name" />
+                <ScalarProperty Name="COA_Summary" ColumnName="COA_Summary" />
+                <ScalarProperty Name="COA_Type" ColumnName="COA_Type" />
+                <ScalarProperty Name="COA_Level" ColumnName="COA_Level" />
+                <ScalarProperty Name="COA_Statement" ColumnName="COA_Statement" />
+                <ScalarProperty Name="COA_Code" ColumnName="COA_Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="acc_Account_Names">
+            <EntityTypeMapping TypeName="ICSModel.acc_Account_Names">
+              <MappingFragment StoreEntitySet="acc_Account_Names">
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Account_Description" ColumnName="Account_Description" />
+                <ScalarProperty Name="Account_Mobile" ColumnName="Account_Mobile" />
+                <ScalarProperty Name="Account_Address" ColumnName="Account_Address" />
+                <ScalarProperty Name="Account_Name" ColumnName="Account_Name" />
+                <ScalarProperty Name="Account_Type" ColumnName="Account_Type" />
+                <ScalarProperty Name="Account_Code" ColumnName="Account_Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_Checks">
+            <EntityTypeMapping TypeName="ICSModel.view_Checks">
+              <MappingFragment StoreEntitySet="view_Checks">
+                <ScalarProperty Name="COA_Code" ColumnName="COA_Code" />
+                <ScalarProperty Name="Voucher_Code" ColumnName="Voucher_Code" />
+                <ScalarProperty Name="Locked_Date" ColumnName="Locked_Date" />
+                <ScalarProperty Name="Locked_By" ColumnName="Locked_By" />
+                <ScalarProperty Name="IsLocked" ColumnName="IsLocked" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="IsIssued" ColumnName="IsIssued" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Check_Description" ColumnName="Check_Description" />
+                <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
+                <ScalarProperty Name="Issued_Date" ColumnName="Issued_Date" />
+                <ScalarProperty Name="Check_Amount_Words" ColumnName="Check_Amount_Words" />
+                <ScalarProperty Name="Check_Amount" ColumnName="Check_Amount" />
+                <ScalarProperty Name="Check_Payee" ColumnName="Check_Payee" />
+                <ScalarProperty Name="Account_Name" ColumnName="Account_Name" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank_Name" />
+                <ScalarProperty Name="Bank_Account" ColumnName="Bank_Account" />
+                <ScalarProperty Name="Check_Number" ColumnName="Check_Number" />
+                <ScalarProperty Name="Corporation" ColumnName="Corporation" />
+                <ScalarProperty Name="Check_Code" ColumnName="Check_Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="view_Journal_Profiles">
+            <EntityTypeMapping TypeName="ICSModel.view_Journal_Profiles">
+              <MappingFragment StoreEntitySet="view_Journal_Profiles">
+                <ScalarProperty Name="COA_Name" ColumnName="COA_Name" />
+                <ScalarProperty Name="COA_Code" ColumnName="COA_Code" />
+                <ScalarProperty Name="Friendly_Name" ColumnName="Friendly_Name" />
+                <ScalarProperty Name="Profile_Type" ColumnName="Profile_Type" />
+                <ScalarProperty Name="Custom_COA" ColumnName="Custom_COA" />
+                <ScalarProperty Name="Profile_Corporation" ColumnName="Profile_Corporation" />
+                <ScalarProperty Name="Profile_VAT" ColumnName="Profile_VAT" />
+                <ScalarProperty Name="Payment_Code" ColumnName="Payment_Code" />
+                <ScalarProperty Name="Profile_Code" ColumnName="Profile_Code" />
+                <ScalarProperty Name="Modified_Date" ColumnName="Modified_Date" />
+                <ScalarProperty Name="Modified_By" ColumnName="Modified_By" />
+                <ScalarProperty Name="Added_Date" ColumnName="Added_Date" />
+                <ScalarProperty Name="Added_By" ColumnName="Added_By" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Balance_Type" ColumnName="Balance_Type" />
+                <ScalarProperty Name="Profile_Description" ColumnName="Profile_Description" />
+                <ScalarProperty Name="Profile_Name" ColumnName="Profile_Name" />
+                <ScalarProperty Name="Journal_Type" ColumnName="Journal_Type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
